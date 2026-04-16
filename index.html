@@ -264,6 +264,37 @@
       line-height: 1.5;
     }
 
+    .recipient-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+    }
+
+    .rec-btn {
+      flex: 1;
+      padding: 9px 8px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid #444;
+      background: #111;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s;
+      line-height: 1.4;
+    }
+
+    .rec-btn:hover { border-color: var(--red); color: var(--ink); }
+
+    .rec-btn.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
     label {
       display: block;
       font-family: 'Space Mono', monospace;
@@ -434,13 +465,13 @@
 <div class="hero">
   <div class="hero-eyebrow">✦ Take Action ✦ Protect Our Right to Meaningful Representation</div>
   <h1 class="hero-headline">The UCP Is Trying to <em>Rig</em> Alberta's Electoral Map</h1>
-  <p class="hero-sub">An independent commission did its job. Now the government wants to ignore it. Send Premier Smith your message.</p>
+  <p class="hero-sub">An independent commission did its job. Now the government wants to ignore it. Send your message.</p>
 </div>
 
 <hr class="rule-bold" />
 
 <div class="counter-strip">
-  <p>Join Albertans demanding fair representation. <strong id="counter">Send your email today.</strong></p>
+  <p>Join Albertans demanding fair representation. <strong>Send your email today.</strong></p>
 </div>
 
 <main class="main">
@@ -482,8 +513,13 @@
 
   <div>
     <div class="form-card" id="formCard">
-      <h3>Send Your Email to Premier Smith</h3>
+      <h3 id="formTitle">Send Your Email to Premier Smith</h3>
       <p class="form-sub">Fill in your name and email. We'll open your mail app with a pre-written letter ready to send. You just hit send.</p>
+
+      <div class="recipient-toggle">
+        <button class="rec-btn active" id="btnSmith" onclick="selectRecipient('smith')">Email Premier Smith</button>
+        <button class="rec-btn" id="btnCarney" onclick="selectRecipient('carney')">Email Prime Minister Carney</button>
+      </div>
 
       <label for="senderName">Your Full Name</label>
       <input type="text" id="senderName" placeholder="Jane Doe" autocomplete="name" />
@@ -520,11 +556,14 @@
 </footer>
 
 <script>
-  const RECIPIENT = 'premier@gov.ab.ca';
-  const SUBJECT = 'Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy';
+  let currentRecipient = 'smith';
 
-  function getBody() {
-    return `The Honourable Danielle Smith
+  const RECIPIENTS = {
+    smith: {
+      email: 'premier@gov.ab.ca',
+      subject: 'Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy',
+      title: 'Send Your Email to Premier Smith',
+      body: `The Honourable Danielle Smith
 Premier of Alberta
 307 Legislature Building
 10800 - 97 Avenue
@@ -562,10 +601,60 @@ Albertans are not ignorant, we know what gerrymandering looks like and we know w
 
 Sincerely,
 
-A Concerned Albertan`;
+A Concerned Albertan`
+    },
+    carney: {
+      email: 'mark.carney@parl.gc.ca',
+      subject: 'Re: Federal Responsibility in the Face of Alberta\'s Democratic Backsliding',
+      title: 'Send Your Email to Prime Minister Carney',
+      body: `The Right Honourable Mark Carney
+Prime Minister of Canada
+80 Wellington Street
+Ottawa, ON K1A 0A2
+
+Re: Federal Responsibility in the Face of Alberta's Democratic Backsliding
+
+Dear Prime Minister Carney,
+
+I am writing to you as a Canadian deeply concerned about two converging threats to democratic integrity coming out of Alberta under the UCP government.
+
+The first is electoral. The 2025-2026 Electoral Boundaries Commission delivered a majority report, signed unanimously by its chair and the NDP-appointed commissioners, recommending fair redistributions to reflect Alberta's population growth. The two UCP-appointed commissioners responded with a minority report designed to dilute urban votes by carving cities into sprawling rurban ridings. The commission chair himself warned the approach is likely unconstitutional under Section 3 of the Charter. Justice Minister Mickey Amery, who had previously committed to respecting the independent process, reversed course the moment the results didn't suit the UCP's interests.
+
+This is gerrymandering. It is unprecedented in Alberta's electoral history. And it demands a federal response.
+
+The second threat is existential. Premier Smith and the UCP have continued to platform and legitimize Alberta separatist rhetoric, entertaining a movement that would fracture this country for partisan gain. Separation talk is not a negotiating tactic. It is a destabilizing force that undermines national cohesion and emboldens those who would rather burn down Confederation than lose an election.
+
+Canadians have watched democratic erosion play out south of the border and said it cannot happen here. It is happening here, in Alberta, right now.
+
+I am asking the federal government to:
+
+1. Publicly condemn the UCP's interference in Alberta's independent electoral boundaries process and call for full implementation of the majority report.
+
+2. Make clear that separatist rhetoric from a sitting provincial government is unacceptable and will not be rewarded with concessions.
+
+3. Refer the constitutionality of the minority report's approach to the appropriate federal legal authorities if Alberta proceeds with partisan boundary manipulation.
+
+The integrity of Canadian democracy is not a provincial matter. I am asking you to treat it accordingly.
+
+Sincerely,
+
+A Concerned Albertan`
+    }
+  };
+
+  function selectRecipient(who) {
+    currentRecipient = who;
+    document.getElementById('btnSmith').classList.toggle('active', who === 'smith');
+    document.getElementById('btnCarney').classList.toggle('active', who === 'carney');
+    document.getElementById('formTitle').textContent = RECIPIENTS[who].title;
+    document.getElementById('emailPreview').textContent = RECIPIENTS[who].body;
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = false;
+    btn.textContent = '✉ Send This Email';
+    document.getElementById('successMsg').classList.remove('visible');
   }
 
-  document.getElementById('emailPreview').textContent = getBody();
+  document.getElementById('emailPreview').textContent = RECIPIENTS.smith.body;
 
   function togglePreview() {
     const preview = document.getElementById('emailPreview');
@@ -574,10 +663,6 @@ A Concerned Albertan`;
     preview.classList.toggle('visible', !isVisible);
     icon.classList.toggle('open', !isVisible);
   }
-
-  document.getElementById('senderName').addEventListener('input', function() {
-    document.getElementById('emailPreview').textContent = getBody();
-  });
 
   function validate() {
     let valid = true;
@@ -597,8 +682,8 @@ A Concerned Albertan`;
 
   function sendEmail() {
     if (!validate()) return;
-    const body = getBody();
-    const mailto = `mailto:${RECIPIENT}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+    const r = RECIPIENTS[currentRecipient];
+    const mailto = `mailto:${r.email}?subject=${encodeURIComponent(r.subject)}&body=${encodeURIComponent(r.body)}`;
     window.location.href = mailto;
 
     setTimeout(() => {
