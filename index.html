@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tell Premier Smith: Hands Off Our Electoral Map | The Maple Mic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #C8102E;
+      --dark-red: #8B0A1E;
+      --black: #0D0D0D;
+      --off-white: #1A1A1A;
+      --warm-grey: #2A2A2A;
+      --ink: #F0EDE6;
+      --muted: #A89E90;
+      --leaf: #4CAF50;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #111111;
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--black);
+      border-bottom: 4px solid var(--red);
+      padding: 0;
+    }
+
+    .masthead {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 24px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .masthead-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .maple-icon {
+      font-size: 28px;
+      line-height: 1;
+      animation: sway 4s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    .pub-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .pub-name span { color: var(--red); }
+
+    .pub-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .header-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--red);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--red);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    .hero {
+      background: var(--black);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 40px,
+        rgba(200, 16, 46, 0.04) 40px,
+        rgba(200, 16, 46, 0.04) 41px
+      );
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #FFFFFF;
+      line-height: 1.12;
+      max-width: 740px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-headline em {
+      color: var(--red);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #A89E90;
+      max-width: 580px;
+      margin: 0 auto;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .rule-bold {
+      border: none;
+      border-top: 3px solid var(--red);
+      margin: 0;
+    }
+
+    .main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 720px) {
+      .main { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .context-block h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .context-block p {
+      font-size: 0.97rem;
+      color: #C8BFB0;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
+    .pullquote {
+      border-left: 4px solid var(--red);
+      padding: 14px 20px;
+      margin: 28px 0;
+      background: #1E1E1E;
+    }
+
+    .pullquote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--dark-red);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .pullquote cite {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      font-style: normal;
+    }
+
+    .demands {
+      margin: 24px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .demands li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #2A2A2A;
+      font-size: 0.95rem;
+      color: #C8BFB0;
+    }
+
+    .demands li:last-child { border-bottom: none; }
+
+    .demand-num {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      color: var(--red);
+      font-size: 0.85rem;
+      min-width: 24px;
+      padding-top: 2px;
+    }
+
+    .form-card {
+      background: #1E1E1E;
+      border: 1px solid #333;
+      border-top: 4px solid var(--red);
+      padding: 28px;
+      position: sticky;
+      top: 24px;
+      box-shadow: 4px 4px 0 #2A2A2A;
+    }
+
+    .form-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .form-card p.form-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+      margin-top: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #444;
+      background: #111;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.9rem;
+      color: #F0EDE6;
+      border-radius: 2px;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    input:focus { border-color: var(--red); }
+
+    .toggle-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+    }
+
+    .toggle-btn:hover { text-decoration: underline; }
+    .toggle-icon { transition: transform 0.25s; font-style: normal; }
+    .toggle-icon.open { transform: rotate(90deg); }
+
+    .email-preview {
+      margin-top: 10px;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 2px;
+      padding: 14px 16px;
+      max-height: 220px;
+      overflow-y: auto;
+      font-size: 0.78rem;
+      line-height: 1.65;
+      color: #C0B8A8;
+      display: none;
+      white-space: pre-wrap;
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    .email-preview.visible { display: block; }
+
+    .send-btn {
+      margin-top: 22px;
+      width: 100%;
+      padding: 14px;
+      background: var(--red);
+      color: white;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .send-btn:hover { background: var(--dark-red); }
+    .send-btn:active { transform: scale(0.98); }
+    .send-btn:disabled { background: #999; cursor: not-allowed; }
+
+    .disclaimer {
+      margin-top: 14px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .success-msg { display: none; text-align: center; padding: 20px 0; }
+    .success-msg.visible { display: block; }
+    .success-icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+    .success-msg h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--leaf);
+      margin-bottom: 8px;
+    }
+
+    .success-msg p { font-size: 0.82rem; color: var(--muted); }
+
+    .counter-strip {
+      background: var(--red);
+      padding: 10px 24px;
+      text-align: center;
+    }
+
+    .counter-strip p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    footer {
+      background: var(--black);
+      border-top: 4px solid var(--red);
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .field-error {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .field-error.visible { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="maple-icon">🍁</div>
+      <div>
+        <div class="pub-name">The Maple <span>Mic</span></div>
+        <div class="pub-tagline">Protect Alberta's Democracy</div>
+      </div>
+    </div>
+    <div class="header-label">Civic Action</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">✦ Take Action ✦ Protect Our Right to Meaningful Representation</div>
+  <h1 class="hero-headline">The UCP Is Trying to <em>Rig</em> Alberta's Electoral Map</h1>
+  <p class="hero-sub">An independent commission did its job. Now the government wants to ignore it. Send Premier Smith your message.</p>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="counter-strip">
+  <p>Join Albertans demanding fair representation. <strong id="counter">Send your email today.</strong></p>
+</div>
+
+<main class="main">
+
+  <div class="context-block">
+    <h2>What's happening and why it matters</h2>
+
+    <p>The 2025-2026 Electoral Boundaries Commission, an independent, non-partisan body, delivered its final report recommending two new seats for Calgary and one for Edmonton to reflect population growth, while consolidating two rural ridings. The commission chair, a retired judge appointed by Premier Smith's own cabinet, signed onto the majority report unanimously alongside the NDP-appointed commissioners.</p>
+
+    <p>Then the two UCP-appointed commissioners issued a minority report. Their alternative maps would carve Alberta's cities into sprawling "rurban" ridings, deliberately diluting urban NDP support by blending city and rural voters. The commission chair himself warned this approach is likely unconstitutional, potentially violating Section 3 of the Charter, which guarantees the right to meaningful representation.</p>
+
+    <div class="pullquote">
+      <p>"Anything short of implementing the majority report in its entirety is election rigging."</p>
+      <cite>— Opposition Leader Naheed Nenshi</cite>
+    </div>
+
+    <p>Before the final report was released, Justice Minister Mickey Amery repeatedly stated that the government would not draw the boundaries and would respect the independent process. The moment the report didn't suit the UCP's interests, he announced that "all options are on the table."</p>
+
+    <p>Minority reports from government-appointed commissioners, complete with alternative maps, are unprecedented in Alberta's electoral history. The majority report itself noted that the minority's recommendations appear "motivated by other considerations" rather than effective representation, and pointedly observed that "our friends south of the border may have a term for this type of redistricting."</p>
+
+    <p>They do. It's called gerrymandering. And Albertans know exactly what it looks like.</p>
+
+    <h2 style="margin-top: 32px;">What we're demanding</h2>
+    <ul class="demands">
+      <li>
+        <span class="demand-num">01</span>
+        <span>The majority report must be implemented in full. No cherry-picking, no hybrid compromise that rewards bad-faith participation.</span>
+      </li>
+      <li>
+        <span class="demand-num">02</span>
+        <span>Minister Amery must publicly commit to honouring the independent process he promised to respect before the report was released.</span>
+      </li>
+      <li>
+        <span class="demand-num">03</span>
+        <span>The Legislative Assembly must not be weaponized to override an independent commission's findings for partisan gain.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="form-card" id="formCard">
+      <h3>Send Your Email to Premier Smith</h3>
+      <p class="form-sub">Fill in your name and email. We'll open your mail app with a pre-written letter ready to send. You just hit send.</p>
+
+      <label for="senderName">Your Full Name</label>
+      <input type="text" id="senderName" placeholder="Jane Doe" autocomplete="name" />
+      <div class="field-error" id="nameError">Please enter your name.</div>
+
+      <label for="senderEmail">Your Email Address</label>
+      <input type="email" id="senderEmail" placeholder="you@example.com" autocomplete="email" />
+      <div class="field-error" id="emailError">Please enter a valid email address.</div>
+
+      <button class="toggle-btn" id="toggleBtn" onclick="togglePreview()">
+        <em class="toggle-icon" id="toggleIcon">▶</em> Preview the letter
+      </button>
+
+      <div class="email-preview" id="emailPreview"></div>
+
+      <button class="send-btn" id="sendBtn" onclick="sendEmail()">
+        ✉ Send This Email
+      </button>
+
+      <p class="disclaimer">This opens your default mail app with the letter pre-filled. Nothing is sent automatically. You stay in control.</p>
+
+      <div class="success-msg" id="successMsg">
+        <div class="success-icon">🍁</div>
+        <h4>Your mail app should be opening now.</h4>
+        <p>Review the letter, hit send, and share this page so others can do the same.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>The Maple Mic &nbsp;·&nbsp; Civic Action</p>
+</footer>
+
+<script>
+  const RECIPIENT = 'premier@gov.ab.ca';
+  const SUBJECT = 'Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy';
+
+  function getBody() {
+    return `The Honourable Danielle Smith
+Premier of Alberta
+307 Legislature Building
+10800 - 97 Avenue
+Edmonton AB  T5K 2B6
+
+Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy
+
+Dear Mrs. Danielle Smith,
+
+I am writing to you as an Albertan who is deeply alarmed by the UCP's transparent attempt to gerrymander this province's electoral map ahead of the 2027 election.
+
+The 2025-2026 Electoral Boundaries Commission (an independent body) issued a final report recommending a net gain of two new seats for Calgary and one for Edmonton to accommodate population growth, while consolidating two rural ridings. The commission chair, Dallas Miller, a retired judge appointed by Danielle Smith's own cabinet, joined with the NDP-appointed commissioners to support this majority report unanimously.
+
+And then the two UCP-appointed commissioners decided it wasn't good enough.
+
+Their minority report would slice Alberta's cities into a pizza pie "rurban" ridings, deliberately diluting NDP urban support, which is eerily similar to Greg Abbott's model from earlier this year in Texas. The commission chair himself warned that the minority report's approach is likely unconstitutional, running afoul of Section 3 of the Charter, which protects the right to meaningful representation. The majority report noted that the minority's recommendations appear "motivated by other considerations" rather than effective representation and sternly remarked that "our friends south of the border may have a term for this type of redistricting."
+
+And they do, and it's called gerrymandering. Us Albertans recognize it for what it is.
+
+What makes this even more concerning is Justice Minister Mickey Amery's reversal. Before the final report was released, Amery had repeatedly stated that the government does and will not draw the boundaries and that he would respect the independent process. Once he saw that the report didn't suit the UCP's interests, he announced that "all options are on the table". As Opposition Leader Nenshi put it, "anything short of implementing the majority report in its entirety is election rigging," and he's absolutely right.
+
+The integrity of the process used to determine electoral districts is foundational to representative democracy. Any partisan interference poisons the legitimacy of the electoral outcomes. This raises the very real possibility that district boundaries will be drawn to guarantee a result on voting day rather than reflect the will of Albertans.
+
+Minority reports from government-appointed commissioners complete with alternative maps are unprecedented in Alberta electoral history. What the UCP is doing is a page ripped out of the authoritarian playbook. Canadians, and Albertans, have watched this play out south of the border, and we said that it cannot happen here. But now it is, under the UCP government.
+
+I am demanding the following:
+
+1. The majority report must be implemented in full. No cherry-picking, no incorporation of the minority maps, and no hybrid compromise that rewards bad-faith participation.
+
+2. Minister Amery must publicly commit to honouring the independent process he promised to respect before the report was released.
+
+3. The Legislative Assembly must not be weaponized to override an independent commission's findings for partisan gain.
+
+Albertans are not ignorant, we know what gerrymandering looks like and we know what a blatant power grab looks like. We will remember, at the ballot box and in the ridings that you are so eager to redraw, who stood up for democracy and who is trying to actively dismantle it.
+
+Sincerely,
+
+A Concerned Albertan`;
+  }
+
+  document.getElementById('emailPreview').textContent = getBody();
+
+  function togglePreview() {
+    const preview = document.getElementById('emailPreview');
+    const icon = document.getElementById('toggleIcon');
+    const isVisible = preview.classList.contains('visible');
+    preview.classList.toggle('visible', !isVisible);
+    icon.classList.toggle('open', !isVisible);
+  }
+
+  document.getElementById('senderName').addEventListener('input', function() {
+    document.getElementById('emailPreview').textContent = getBody();
+  });
+
+  function validate() {
+    let valid = true;
+    const name = document.getElementById('senderName').value.trim();
+    const nameErr = document.getElementById('nameError');
+    if (!name) { nameErr.classList.add('visible'); valid = false; }
+    else { nameErr.classList.remove('visible'); }
+
+    const email = document.getElementById('senderEmail').value.trim();
+    const emailErr = document.getElementById('emailError');
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(email)) { emailErr.classList.add('visible'); valid = false; }
+    else { emailErr.classList.remove('visible'); }
+
+    return valid;
+  }
+
+  function sendEmail() {
+    if (!validate()) return;
+    const body = getBody();
+    const mailto = `mailto:${RECIPIENT}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    setTimeout(() => {
+      document.getElementById('successMsg').classList.add('visible');
+      document.getElementById('sendBtn').disabled = true;
+      document.getElementById('sendBtn').textContent = '✓ Email opened';
+    }, 800);
+  }
+</script>
+
+</body>
+</html>
