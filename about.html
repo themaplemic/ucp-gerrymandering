@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="About | Hands Off Our Maps" />
+<meta property="og:description" content="Why this campaign was launched." />
+<meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
+<meta property="og:url" content="https://handsoffourmaps.ca/about" />
+<title>About | Hands Off Our Maps</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--red: #C8102E;
+--dark-red: #8B0A1E;
+--black: #0D0D0D;
+--ink: #F0EDE6;
+--muted: #A89E90;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+background: #111111;
+color: var(--ink);
+font-family: 'Source Serif 4', Georgia, serif;
+font-weight: 400;
+line-height: 1.7;
+min-height: 100vh;
+}
+
+header {
+background: var(--black);
+border-bottom: 4px solid var(--red);
+padding: 0;
+}
+
+.masthead {
+max-width: 900px;
+margin: 0 auto;
+padding: 18px 24px 14px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+}
+
+.masthead-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.maple-icon {
+width: 100px;
+height: 100px;
+object-fit: contain;
+animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+0%, 100% { transform: rotate(-3deg); }
+50% { transform: rotate(3deg); }
+}
+
+.pub-name {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.6rem;
+color: #FFFFFF;
+letter-spacing: 0.01em;
+line-height: 1;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.pub-name span { color: var(--red); }
+
+.pub-tagline {
+font-family: 'Space Mono', monospace;
+font-size: 0.6rem;
+color: var(--muted);
+letter-spacing: 0.12em;
+text-transform: uppercase;
+margin-top: 3px;
+}
+
+nav {
+display: flex;
+gap: 16px;
+}
+
+nav a {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.15em;
+text-transform: uppercase;
+text-decoration: none;
+transition: color 0.2s;
+}
+
+nav a:hover { color: var(--red); }
+nav a.active { color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+
+.hero {
+background: var(--black);
+padding: 56px 24px 48px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: repeating-linear-gradient(
+0deg,
+transparent,
+transparent 40px,
+rgba(200, 16, 46, 0.04) 40px,
+rgba(200, 16, 46, 0.04) 41px
+);
+pointer-events: none;
+}
+
+.hero-eyebrow {
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--red);
+margin-bottom: 18px;
+}
+
+.hero-headline {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: clamp(2rem, 5vw, 3.2rem);
+color: #FFFFFF;
+line-height: 1.12;
+max-width: 740px;
+margin: 0 auto;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+
+.rule-bold {
+border: none;
+border-top: 3px solid var(--red);
+margin: 0;
+}
+
+.content {
+max-width: 680px;
+margin: 0 auto;
+padding: 64px 24px 80px;
+}
+
+.content p {
+font-family: 'Public Sans', sans-serif;
+font-size: 1.05rem;
+color: #C8BFB0;
+margin-bottom: 24px;
+line-height: 1.85;
+font-weight: 400;
+}
+
+.content p strong {
+color: var(--ink);
+font-weight: 700;
+}
+
+.content p.cta {
+font-family: 'Anton', sans-serif;
+font-size: 1.3rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+color: var(--red);
+margin-top: 40px;
+line-height: 1.4;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+text-decoration: none;
+border: 1px solid #333;
+padding: 8px 16px;
+border-radius: 2px;
+margin-bottom: 48px;
+transition: all 0.2s;
+}
+
+.back-btn { border-color: var(--red); color: var(--red); }
+.back-btn:hover { border-color: white; color: white; }
+
+footer {
+background: var(--black);
+border-top: 4px solid var(--red);
+padding: 24px;
+text-align: center;
+}
+
+footer p {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="masthead">
+<div class="masthead-left">
+<img class="maple-icon" src="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776447469/unnamed_qsvv47.png" alt="Hands Off Our Maps protesters" />
+<div>
+<a href="/" class="pub-name">Hands Off <span>Our Maps</span></a>
+<div class="pub-tagline">Protect Alberta's Democracy</div>
+</div>
+</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about.html" class="active">About</a>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-eyebrow">✦ About This Campaign ✦</div>
+<h1 class="hero-headline">Why "Hands Off Our Maps" Was Launched</h1>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="content">
+<a href="/" class="back-btn">← Back to Campaign</a>
+
+<p>This campaign started because of a map. But it was never really about the map.</p>
+
+<p>When the UCP rejected the majority report of the 2025-2026 Electoral Boundaries Commission, something snapped. An independent, non-partisan body did exactly what it was asked to do. A retired judge appointed by Premier Smith's own cabinet signed off on it. And the government threw it out anyway because they didn't like the result.</p>
+
+<p>That is not how democracy works.</p>
+
+<p>But here is the thing, if you have been paying attention in Alberta, none of this is surprising. This is a government that has attacked trans Albertans and stripped protections from some of the most vulnerable people in this province. A government that has gone after teachers and public education. A government that has invoked the notwithstanding clause as a political weapon. A government that has gutted supports for disabled Albertans while platforming separatist rhetoric that would tear this country apart.</p>
+
+<p>The gerrymandering attempt is not an isolated incident, it is the next logical step for a government that has decided the rules only apply when the rules work in their favour.</p>
+
+<p><strong>This campaign exists because enough is enough.</strong> You do not have to be a political expert to understand what is happening, you just have to be paying attention.</p>
+
+<p class="cta">Send your email. Share the page. Make some noise.</p>
+</div>
+
+<footer>
+<p>Hands Off Our Maps &nbsp;·&nbsp; Civic Action</p>
+</footer>
+
+</body>
+</html>
