@@ -6,9 +6,10 @@
 <meta property="og:title" content="Tell Premier Smith: Hands Off Our Electoral Map" />
 <meta property="og:description" content="photo campaign" />
 <meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
-<meta property="og:url" content="https://themaplemic.github.io/ucp-gerrymandering/" />
-<title>Tell Premier Smith: Hands Off Our Electoral Map | Email Campaign</title>
+<meta property="og:url" content="https://handsoffourmaps.ca/" />
+<title>Hands Off Our Maps | Civic Action Against UCP Gerrymandering</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -59,6 +60,76 @@ gap: 14px;
 .maple-icon {
 width: 100px;
 height: 100px;
+object-fit: contain;
+animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+0%, 100% { transform: rotate(-3deg); }
+50% { transform: rotate(3deg); }
+}
+
+.pub-name {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.6rem;
+color: #FFFFFF;
+letter-spacing: 0.01em;
+line-height: 1;
+text-transform: uppercase;
+}
+
+.pub-name span { color: var(--red); }
+
+.pub-tagline {
+font-family: 'Space Mono', monospace;
+font-size: 0.6rem;
+color: var(--muted);
+letter-spacing: 0.12em;
+text-transform: uppercase;
+margin-top: 3px;
+}
+
+.header-label {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--red);
+letter-spacing: 0.15em;
+text-transform: uppercase;
+border: 1px solid var(--red);
+padding: 4px 10px;
+border-radius: 2px;
+}
+
+.hero {
+background: var(--black);
+padding: 56px 24px 48px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: repeating-linear-gradient(
+0deg,
+transparent,
+transparent 40px,
+rgba(200, 16, 46, 0.04) 40px,
+rgba(200, 16, 46, 0.04) 41px
+);
+pointer-events: none;
+}
+
+.hero-eyebrow {
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--red);
+margin-bottom: 18px;
 line-height: 2;
 }
 
@@ -66,8 +137,333 @@ line-height: 2;
 font-size: 0.85rem;
 display: block;
 margin-bottom: 4px;
+}
+
+.hero-headline {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: clamp(2rem, 5vw, 3.2rem);
+color: #FFFFFF;
+line-height: 1.12;
+max-width: 740px;
+margin: 0 auto 20px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+
+.hero-headline .rig-part { color: var(--red); }
+
+.hero-sub {
+font-family: 'Public Sans', sans-serif;
+font-weight: 300;
+font-size: clamp(0.85rem, 2vw, 1.15rem);
+text-transform: uppercase;
+letter-spacing: 0.2em;
+color: #C8BFB0;
 max-width: 680px;
 margin: 16px auto 0;
+}
+
+.rule-bold {
+border: none;
+border-top: 3px solid var(--red);
+margin: 0;
+}
+
+.main {
+max-width: 900px;
+margin: 0 auto;
+padding: 48px 24px 80px;
+display: grid;
+grid-template-columns: 1fr 340px;
+gap: 48px;
+align-items: start;
+}
+
+@media (max-width: 720px) {
+.main { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.context-block h2 {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.45rem;
+color: var(--ink);
+margin-bottom: 14px;
+line-height: 1.25;
+text-transform: uppercase;
+letter-spacing: 0.03em;
+}
+
+.context-block p {
+font-family: 'Public Sans', sans-serif;
+font-size: 0.97rem;
+color: #C8BFB0;
+margin-bottom: 14px;
+line-height: 1.75;
+font-weight: 400;
+}
+
+.pullquote {
+border-left: 4px solid var(--red);
+padding: 14px 20px;
+margin: 28px 0;
+background: #1E1E1E;
+}
+
+.pullquote p {
+font-family: 'Playfair Display', Georgia, serif;
+font-style: italic;
+font-size: 1.1rem;
+color: #FF3355;
+margin: 0;
+line-height: 1.5;
+}
+
+.pullquote cite {
+display: block;
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+margin-top: 8px;
+font-style: normal;
+}
+
+.demands {
+margin: 24px 0;
+padding-left: 0;
+list-style: none;
+}
+
+.demands li {
+display: flex;
+gap: 12px;
+padding: 12px 0;
+border-bottom: 1px solid #2A2A2A;
+font-family: 'Public Sans', sans-serif;
+font-size: 0.95rem;
+color: #C8BFB0;
+}
+
+.demands li:last-child { border-bottom: none; }
+
+.demand-num {
+font-family: 'Space Mono', monospace;
+font-weight: 700;
+color: var(--red);
+font-size: 0.85rem;
+min-width: 24px;
+padding-top: 2px;
+}
+
+.form-card {
+background: #1E1E1E;
+border: 1px solid #333;
+border-top: 4px solid var(--red);
+padding: 28px;
+position: sticky;
+top: 24px;
+box-shadow: 4px 4px 0 #2A2A2A;
+}
+
+.form-card h3 {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.15rem;
+margin-bottom: 6px;
+color: var(--ink);
+text-transform: uppercase;
+letter-spacing: 0.03em;
+}
+
+.form-card h3 span { color: var(--red); }
+
+.form-card p.form-sub {
+font-family: 'Public Sans', sans-serif;
+font-size: 0.82rem;
+color: var(--muted);
+margin-bottom: 22px;
+line-height: 1.5;
+}
+
+.recipient-toggle {
+display: flex;
+gap: 8px;
+margin-bottom: 4px;
+margin-top: 4px;
+}
+
+.rec-btn {
+flex: 1;
+padding: 9px 8px;
+font-family: 'Space Mono', monospace;
+font-size: 0.58rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+border: 1px solid #444;
+background: #111;
+color: var(--muted);
+cursor: pointer;
+border-radius: 2px;
+transition: all 0.2s;
+line-height: 1.4;
+}
+
+.rec-btn:hover { border-color: var(--red); color: var(--ink); }
+.rec-btn.active { background: var(--red); border-color: var(--red); color: white; }
+
+label {
+display: block;
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 5px;
+margin-top: 14px;
+}
+
+input[type="text"], input[type="email"] {
+width: 100%;
+padding: 10px 12px;
+border: 1px solid #444;
+background: #111;
+font-family: 'Source Serif 4', Georgia, serif;
+font-size: 0.9rem;
+color: #F0EDE6;
+border-radius: 2px;
+transition: border-color 0.2s;
+outline: none;
+}
+
+input:focus { border-color: var(--red); }
+
+.toggle-btn {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--red);
+background: none;
+border: none;
+cursor: pointer;
+padding: 0;
+display: flex;
+align-items: center;
+gap: 6px;
+margin-top: 20px;
+}
+
+.toggle-btn:hover { text-decoration: underline; }
+.toggle-icon { transition: transform 0.25s; font-style: normal; }
+.toggle-icon.open { transform: rotate(90deg); }
+
+.email-preview {
+margin-top: 10px;
+background: #111;
+border: 1px solid #333;
+border-radius: 2px;
+padding: 14px 16px;
+max-height: 220px;
+overflow-y: auto;
+font-size: 0.78rem;
+line-height: 1.65;
+color: #C0B8A8;
+display: none;
+white-space: pre-wrap;
+font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.email-preview.visible { display: block; }
+
+.send-btn {
+margin-top: 22px;
+width: 100%;
+padding: 14px;
+background: var(--red);
+color: white;
+font-family: 'Space Mono', monospace;
+font-weight: 700;
+font-size: 0.78rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+border: none;
+cursor: pointer;
+border-radius: 2px;
+transition: background 0.2s, transform 0.1s;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+
+.send-btn:hover { background: var(--dark-red); }
+.send-btn:active { transform: scale(0.98); }
+.send-btn:disabled { background: #999; cursor: not-allowed; }
+
+.disclaimer {
+margin-top: 14px;
+font-size: 0.72rem;
+color: var(--muted);
+line-height: 1.5;
+text-align: center;
+}
+
+.success-msg { display: none; text-align: center; padding: 20px 0; }
+.success-msg.visible { display: block; }
+.success-icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+.success-msg h4 {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 1.1rem;
+color: var(--leaf);
+margin-bottom: 8px;
+}
+
+.success-msg p { font-size: 0.82rem; color: var(--muted); }
+
+.counter-strip {
+background: var(--red);
+padding: 10px 24px;
+text-align: center;
+}
+
+.counter-strip p {
+font-family: 'Space Mono', monospace;
+font-size: 0.68rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: white;
+}
+
+footer {
+background: var(--black);
+border-top: 4px solid var(--red);
+padding: 24px;
+text-align: center;
+}
+
+footer p {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+.field-error {
+font-family: 'Space Mono', monospace;
+font-size: 0.6rem;
+color: var(--red);
+letter-spacing: 0.08em;
+margin-top: 4px;
+display: none;
+}
+
+.field-error.visible { display: block; }
+
 .share-strip {
 background: #1A1A1A;
 border-bottom: 1px solid #2A2A2A;
@@ -122,10 +518,7 @@ border-top: 3px solid var(--red);
 padding: 56px 24px;
 }
 
-.voices-inner {
-max-width: 900px;
-margin: 0 auto;
-}
+.voices-inner { max-width: 900px; margin: 0 auto; }
 
 .voices-title {
 font-family: 'Anton', sans-serif;
@@ -267,14 +660,8 @@ border-top: 3px solid var(--red);
 padding: 40px 24px;
 }
 
-.admin-inner, .admin-login-box {
-max-width: 900px;
-margin: 0 auto;
-}
-
-.admin-login-box {
-max-width: 400px;
-}
+.admin-inner, .admin-login-box { max-width: 900px; margin: 0 auto; }
+.admin-login-box { max-width: 400px; }
 
 .admin-header {
 display: flex;
@@ -315,11 +702,7 @@ border-radius: 2px;
 
 .admin-logout:hover { border-color: var(--red); color: var(--red); }
 
-.admin-btns {
-display: flex;
-gap: 8px;
-margin-top: 10px;
-}
+.admin-btns { display: flex; gap: 8px; margin-top: 10px; }
 
 .admin-approve-btn, .admin-delete-btn {
 font-family: 'Space Mono', monospace;
@@ -351,6 +734,7 @@ margin-top: 16px;
 #adminLogin input:focus { border-color: var(--red); }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -384,26 +768,73 @@ The UCP Is Trying to <span class="rig-part">Rig</span> Alberta's Electoral Map
 <p>Share this page</p>
 <div class="share-buttons">
 <a class="share-btn threads" href="https://www.threads.net/intent/post?text=The+UCP+is+trying+to+gerrymander+Alberta%27s+electoral+map.+Send+your+email+now+%E2%86%92+https%3A%2F%2Fhandsoffourmaps.ca" target="_blank" title="Share on Threads">
-<svg width="20" height="20" viewBox="0 0 192 192" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M141.537 88.988a66.667 66.667 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.318-11.319 11.259-24.925 16.1-45.488 16.248-22.788-.169-40.054-7.435-51.318-21.598C50.427 138.352 45.17 120.12 45 96c.17-24.12 5.427-42.352 15.638-54.348C71.864 27.835 89.13 20.569 111.918 20.4c22.95.17 40.441 7.46 51.964 21.662 5.564 6.906 9.064 15.45 10.984 24.96l16.184-4.32c-2.328-12.329-6.973-23.21-14.038-32.154C161.747 13.734 140.514 4.212 111.99 4h-.406C83.037 4.212 61.969 13.756 48.343 30.432 36.504 45.07 30.368 65.357 30.168 96c.2 30.643 6.336 50.93 18.175 65.568C61.97 178.244 83.037 187.788 111.584 188h.406c25.32-.172 43.08-6.82 57.757-21.423 19.1-19.017 18.495-42.912 12.187-57.48-4.547-10.597-13.497-19.24-40.397-20.109Zm-70.037 29.853c-.477-8.978 6.57-16.895 20.222-17.79 1.472-.085 2.919-.127 4.34-.127 6.136 0 11.894.619 17.166 1.768-1.958 24.25-14.07 32.764-27.6 33.493-8.718.489-13.661-3.773-14.128-7.344Z"/></svg>
+<svg width="20" height="20" viewBox="0 0 192 192" fill="currentColor"><path d="M141.537 88.988a66.667 66.667 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.318-11.319 11.259-24.925 16.1-45.488 16.248-22.788-.169-40.054-7.435-51.318-21.598C50.427 138.352 45.17 120.12 45 96c.17-24.12 5.427-42.352 15.638-54.348C71.864 27.835 89.13 20.569 111.918 20.4c22.95.17 40.441 7.46 51.964 21.662 5.564 6.906 9.064 15.45 10.984 24.96l16.184-4.32c-2.328-12.329-6.973-23.21-14.038-32.154C161.747 13.734 140.514 4.212 111.99 4h-.406C83.037 4.212 61.969 13.756 48.343 30.432 36.504 45.07 30.368 65.357 30.168 96c.2 30.643 6.336 50.93 18.175 65.568C61.97 178.244 83.037 187.788 111.584 188h.406c25.32-.172 43.08-6.82 57.757-21.423 19.1-19.017 18.495-42.912 12.187-57.48-4.547-10.597-13.497-19.24-40.397-20.109Zm-70.037 29.853c-.477-8.978 6.57-16.895 20.222-17.79 1.472-.085 2.919-.127 4.34-.127 6.136 0 11.894.619 17.166 1.768-1.958 24.25-14.07 32.764-27.6 33.493-8.718.489-13.661-3.773-14.128-7.344Z"/></svg>
 </a>
 <a class="share-btn bluesky" href="https://bsky.app/intent/compose?text=The+UCP+is+trying+to+gerrymander+Alberta%27s+electoral+map.+Send+your+email+now+%E2%86%92+https%3A%2F%2Fhandsoffourmaps.ca" target="_blank" title="Share on Bluesky">
-<svg width="20" height="20" viewBox="0 0 360 320" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M180 141.964C163.699 110.262 119.308 51.255 78.476 26.486C38.44 2.24 18.958 7.375 8.583 13.748C-2.499 20.58-2.061 39.077 0 47.049C9.875 84.647 34.948 94.06 62.033 99.577C59.894 99.577 57.763 99.577 55.639 99.577C30.505 100.698 8.286 110.262 0 143.064C-8.286 175.866 12.145 190.47 20.431 194.08C51.647 207.29 86.147 200.657 97.697 197.044C83.097 207.29 49.697 229.777 27.474 243.066C5.25 256.355-0.5 270.356 0 279.744C0.5 289.132 5.95 299.999 14.448 305.999C22.946 311.999 36.447 314.5 50 312.5C63.553 310.5 78.551 302.5 97.697 289.5C116.843 276.5 148.399 252.5 180 229.777C211.601 252.5 243.157 276.5 262.303 289.5C281.449 302.5 296.447 310.5 310 312.5C323.553 314.5 337.054 311.999 345.552 305.999C354.05 299.999 359.5 289.132 360 279.744C360.5 270.356 354.75 256.355 332.526 243.066C310.303 229.777 276.903 207.29 262.303 197.044C273.853 200.657 308.353 207.29 339.569 194.08C347.855 190.47 368.286 175.866 360 143.064C351.714 110.262 329.495 100.698 304.361 99.577C302.237 99.577 300.106 99.577 297.967 99.577C325.052 94.06 350.125 84.647 360 47.049C362.061 39.077 362.499 20.58 351.417 13.748C341.042 7.375 321.56 2.24 281.524 26.486C240.692 51.255 196.301 110.262 180 141.964Z"/></svg>
+<svg width="20" height="20" viewBox="0 0 360 320" fill="currentColor"><path d="M180 141.964C163.699 110.262 119.308 51.255 78.476 26.486C38.44 2.24 18.958 7.375 8.583 13.748C-2.499 20.58-2.061 39.077 0 47.049C9.875 84.647 34.948 94.06 62.033 99.577C59.894 99.577 57.763 99.577 55.639 99.577C30.505 100.698 8.286 110.262 0 143.064C-8.286 175.866 12.145 190.47 20.431 194.08C51.647 207.29 86.147 200.657 97.697 197.044C83.097 207.29 49.697 229.777 27.474 243.066C5.25 256.355-0.5 270.356 0 279.744C0.5 289.132 5.95 299.999 14.448 305.999C22.946 311.999 36.447 314.5 50 312.5C63.553 310.5 78.551 302.5 97.697 289.5C116.843 276.5 148.399 252.5 180 229.777C211.601 252.5 243.157 276.5 262.303 289.5C281.449 302.5 296.447 310.5 310 312.5C323.553 314.5 337.054 311.999 345.552 305.999C354.05 299.999 359.5 289.132 360 279.744C360.5 270.356 354.75 256.355 332.526 243.066C310.303 229.777 276.903 207.29 262.303 197.044C273.853 200.657 308.353 207.29 339.569 194.08C347.855 190.47 368.286 175.866 360 143.064C351.714 110.262 329.495 100.698 304.361 99.577C302.237 99.577 300.106 99.577 297.967 99.577C325.052 94.06 350.125 84.647 360 47.049C362.061 39.077 362.499 20.58 351.417 13.748C341.042 7.375 321.56 2.24 281.524 26.486C240.692 51.255 196.301 110.262 180 141.964Z"/></svg>
 </a>
 <a class="share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhandsoffourmaps.ca" target="_blank" title="Share on Facebook">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 </a>
 <a class="share-btn instagram" href="https://www.instagram.com" target="_blank" title="Share on Instagram">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
 </a>
 </div>
-smith')">Email Premier Smith</button>
-carney')">Email Prime Minister Carney</button>
-<!-- Wall of Voices -->
+</div>
+
+<main class="main">
+<div class="context-block">
+<h2>What's happening and why it matters</h2>
+<p>The 2025-2026 Electoral Boundaries Commission, an independent, non-partisan body, delivered its final report recommending two new seats for Calgary and one for Edmonton to reflect population growth, while consolidating two rural ridings. The commission chair, a retired judge appointed by Premier Smith's own cabinet, signed onto the majority report unanimously alongside the NDP-appointed commissioners.</p>
+<p>Then the two UCP-appointed commissioners issued a minority report. Their alternative maps would carve Alberta's cities into sprawling "rurban" ridings, deliberately diluting urban NDP support by blending city and rural voters. The commission chair himself warned this approach is likely unconstitutional, potentially violating Section 3 of the Charter, which guarantees the right to meaningful representation.</p>
+<div class="pullquote">
+<p>"Anything short of implementing the majority report in its entirety is election rigging."</p>
+<cite>— Opposition Leader Naheed Nenshi</cite>
+</div>
+<p>Before the final report was released, Justice Minister Mickey Amery repeatedly stated that the government would not draw the boundaries and would respect the independent process. The moment the report didn't suit the UCP's interests, he announced that "all options are on the table."</p>
+<p>Minority reports from government-appointed commissioners, complete with alternative maps, are unprecedented in Alberta's electoral history. The majority report itself noted that the minority's recommendations appear "motivated by other considerations" rather than effective representation, and pointedly observed that "our friends south of the border may have a term for this type of redistricting."</p>
+<p>They do. It's called gerrymandering. And Albertans know exactly what it looks like.</p>
+<h2 style="margin-top: 32px;">What we're demanding</h2>
+<ul class="demands">
+<li><span class="demand-num">01</span><span>The majority report must be implemented in full. No cherry-picking, no hybrid compromise that rewards bad-faith participation.</span></li>
+<li><span class="demand-num">02</span><span>Minister Amery must publicly commit to honouring the independent process he promised to respect before the report was released.</span></li>
+<li><span class="demand-num">03</span><span>The Legislative Assembly must not be weaponized to override an independent commission's findings for partisan gain.</span></li>
+</ul>
+</div>
+
+<div>
+<div class="form-card" id="formCard">
+<h3 id="formTitle">Send Your Email to <span>Premier Smith</span></h3>
+<p class="form-sub">Fill in your name and email. We'll open your mail app with a pre-written letter ready to send. You just hit send.</p>
+<div class="recipient-toggle">
+<button class="rec-btn active" id="btnSmith" onclick="selectRecipient('smith')">Email Premier Smith</button>
+<button class="rec-btn" id="btnCarney" onclick="selectRecipient('carney')">Email Prime Minister Carney</button>
+</div>
+<label for="senderName">Your Full Name</label>
+<input type="text" id="senderName" placeholder="Jane Doe" autocomplete="name" />
+<div class="field-error" id="nameError">Please enter your name.</div>
+<label for="senderEmail">Your Email Address</label>
+<input type="email" id="senderEmail" placeholder="you@example.com" autocomplete="email" />
+<div class="field-error" id="emailError">Please enter a valid email address.</div>
+<button class="toggle-btn" id="toggleBtn" onclick="togglePreview()">
+<em class="toggle-icon" id="toggleIcon">▶</em> Preview the letter
+</button>
+<div class="email-preview" id="emailPreview"></div>
+<button class="send-btn" id="sendBtn" onclick="sendEmail()">✉ Send This Email</button>
+<p class="disclaimer">This opens your default mail app with the letter pre-filled. Nothing is sent automatically. You stay in control.</p>
+<div class="success-msg" id="successMsg">
+<div class="success-icon">🍁</div>
+<h4>Your mail app should be opening now.</h4>
+<p>Review the letter, hit send, and share this page so others can do the same.</p>
+</div>
+</div>
+</div>
+</main>
+
 <section class="voices-section">
 <div class="voices-inner">
 <h2 class="voices-title">Wall of Voices</h2>
 <p class="voices-sub">Why are you taking action? Share your reason.</p>
-
 <div class="voices-form">
 <textarea id="voiceInput" placeholder="I'm taking action because..." maxlength="280"></textarea>
 <div class="voices-form-footer">
@@ -411,31 +842,27 @@ carney')">Email Prime Minister Carney</button>
 <button class="voices-submit" onclick="submitVoice()">Post</button>
 </div>
 </div>
-
 <div class="counter-block">
 <span class="counter-num" id="emailCounter">0</span>
 <span class="counter-label">Albertans have sent their email</span>
 </div>
-
 <div class="voices-list" id="voicesList">
 <p class="voices-loading">Loading voices...</p>
 </div>
 </div>
 </section>
 
-<!-- Secret Admin Panel -->
 <div id="adminPanel" style="display:none;">
 <div class="admin-inner">
 <div class="admin-header">
 <h2 class="admin-title">Admin Panel</h2>
 <button class="admin-logout" onclick="adminLogout()">Log Out</button>
 </div>
-<p class="admin-sub">Approve or delete comments below. Approved comments are visible to the public.</p>
+<p class="admin-sub">Approve or delete comments below.</p>
 <div id="adminVoicesList" class="voices-list"></div>
 </div>
 </div>
 
-<!-- Admin Login (hidden, access via ?admin in URL) -->
 <div id="adminLogin" style="display:none;">
 <div class="admin-login-box">
 <h2 class="admin-title">Admin Access</h2>
@@ -446,31 +873,141 @@ carney')">Email Prime Minister Carney</button>
 
 <footer>
 <p>Hands Off Our Maps &nbsp;·&nbsp; Civic Action</p>
-btnSmith').classList.toggle('active', who === 'smith');
+</footer>
+
+<script>
+let currentRecipient = 'smith';
+
+const TITLE_HTML = {
+smith: 'Send Your Email to <span>Premier Smith</span>',
+carney: 'Send Your Email to <span>Prime Minister Carney</span>'
+};
+
+const RECIPIENTS = {
+smith: {
+email: 'premier@gov.ab.ca',
+subject: 'Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy',
+title: 'Send Your Email to Premier Smith',
+body: `The Honourable Danielle Smith
+Premier of Alberta
+307 Legislature Building
+10800 - 97 Avenue
+Edmonton AB T5K 2B6
+
+Re: The UCP Electoral Boundary Interference is a Direct Attack on Democracy
+
+Dear Mrs. Danielle Smith,
+
+I am writing to you as an Albertan who is deeply alarmed by the UCP's transparent attempt to gerrymander this province's electoral map ahead of the 2027 election.
+
+The 2025-2026 Electoral Boundaries Commission (an independent body) issued a final report recommending a net gain of two new seats for Calgary and one for Edmonton to accommodate population growth, while consolidating two rural ridings. The commission chair, Dallas Miller, a retired judge appointed by Danielle Smith's own cabinet, joined with the NDP-appointed commissioners to support this majority report unanimously.
+
+And then the two UCP-appointed commissioners decided it wasn't good enough.
+
+Their minority report would slice Alberta's cities into a pizza pie "rurban" ridings, deliberately diluting NDP urban support, which is eerily similar to Greg Abbott's model from earlier this year in Texas. The commission chair himself warned that the minority report's approach is likely unconstitutional, running afoul of Section 3 of the Charter, which protects the right to meaningful representation. The majority report noted that the minority's recommendations appear "motivated by other considerations" rather than effective representation and sternly remarked that "our friends south of the border may have a term for this type of redistricting."
+
+And they do, and it's called gerrymandering. Us Albertans recognize it for what it is.
+
+What makes this even more concerning is Justice Minister Mickey Amery's reversal. Before the final report was released, Amery had repeatedly stated that the government does and will not draw the boundaries and that he would respect the independent process. Once he saw that the report didn't suit the UCP's interests, he announced that "all options are on the table". As Opposition Leader Nenshi put it, "anything short of implementing the majority report in its entirety is election rigging," and he's absolutely right.
+
+The integrity of the process used to determine electoral districts is foundational to representative democracy. Any partisan interference poisons the legitimacy of the electoral outcomes. This raises the very real possibility that district boundaries will be drawn to guarantee a result on voting day rather than reflect the will of Albertans.
+
+Minority reports from government-appointed commissioners complete with alternative maps are unprecedented in Alberta electoral history. What the UCP is doing is a page ripped out of the authoritarian playbook. Canadians, and Albertans, have watched this play out south of the border, and we said that it cannot happen here. But now it is, under the UCP government.
+
+I am demanding the following:
+
+1. The majority report must be implemented in full. No cherry-picking, no incorporation of the minority maps, and no hybrid compromise that rewards bad-faith participation.
+
+2. Minister Amery must publicly commit to honouring the independent process he promised to respect before the report was released.
+
+3. The Legislative Assembly must not be weaponized to override an independent commission's findings for partisan gain.
+
+Albertans are not ignorant, we know what gerrymandering looks like and we know what a blatant power grab looks like. We will remember, at the ballot box and in the ridings that you are so eager to redraw, who stood up for democracy and who is trying to actively dismantle it.
+
+Sincerely,
+
+A Concerned Albertan`
+},
+carney: {
+email: 'mark.carney@parl.gc.ca',
+subject: 'Re: Federal Responsibility in the Face of Alberta\'s Democratic Backsliding',
+title: 'Send Your Email to Prime Minister Carney',
+body: `The Right Honourable Mark Carney
+Prime Minister of Canada
+80 Wellington Street
+Ottawa, ON K1A 0A2
+
+Re: Federal Responsibility in the Face of Alberta's Democratic Backsliding
+
+Dear Prime Minister Carney,
+
+I am writing to you as a Canadian deeply concerned about two converging threats to democratic integrity coming out of Alberta under the UCP government.
+
+The first is electoral. The 2025-2026 Electoral Boundaries Commission delivered a majority report, signed unanimously by its chair and the NDP-appointed commissioners, recommending fair redistributions to reflect Alberta's population growth. The two UCP-appointed commissioners responded with a minority report designed to dilute urban votes by carving cities into sprawling rurban ridings. The commission chair himself warned the approach is likely unconstitutional under Section 3 of the Charter. Justice Minister Mickey Amery, who had previously committed to respecting the independent process, reversed course the moment the results didn't suit the UCP's interests.
+
+This is gerrymandering. It is unprecedented in Alberta's electoral history. And it demands a federal response.
+
+The second threat is existential. Premier Smith and the UCP have continued to platform and legitimize Alberta separatist rhetoric, entertaining a movement that would fracture this country for partisan gain. Separation talk is not a negotiating tactic. It is a destabilizing force that undermines national cohesion and emboldens those who would rather burn down Confederation than lose an election.
+
+Canadians have watched democratic erosion play out south of the border and said it cannot happen here. It is happening here, in Alberta, right now.
+
+I am asking the federal government to:
+
+1. Publicly condemn the UCP's interference in Alberta's independent electoral boundaries process and call for full implementation of the majority report.
+
+2. Make clear that separatist rhetoric from a sitting provincial government is unacceptable and will not be rewarded with concessions.
+
+3. Refer the constitutionality of the minority report's approach to the appropriate federal legal authorities if Alberta proceeds with partisan boundary manipulation.
+
+The integrity of Canadian democracy is not a provincial matter. I am asking you to treat it accordingly.
+
+Sincerely,
+
+A Concerned Albertan`
+}
+};
+
+function selectRecipient(who) {
+currentRecipient = who;
+document.getElementById('btnSmith').classList.toggle('active', who === 'smith');
 document.getElementById('btnCarney').classList.toggle('active', who === 'carney');
 document.getElementById('formTitle').innerHTML = TITLE_HTML[who];
 document.getElementById('emailPreview').textContent = RECIPIENTS[who].body;
 const btn = document.getElementById('sendBtn');
-successMsg').classList.remove('visible');
+btn.disabled = false;
+btn.textContent = '✉ Send This Email';
+document.getElementById('successMsg').classList.remove('visible');
 }
 
 document.getElementById('emailPreview').textContent = RECIPIENTS.smith.body;
-emailPreview');
+
+function togglePreview() {
+const preview = document.getElementById('emailPreview');
 const icon = document.getElementById('toggleIcon');
 const isVisible = preview.classList.contains('visible');
 preview.classList.toggle('visible', !isVisible);
-senderName').value.trim();
+icon.classList.toggle('open', !isVisible);
+}
+
+function validate() {
+let valid = true;
+const name = document.getElementById('senderName').value.trim();
 const nameErr = document.getElementById('nameError');
 if (!name) { nameErr.classList.add('visible'); valid = false; }
 else { nameErr.classList.remove('visible'); }
-
 const email = document.getElementById('senderEmail').value.trim();
 const emailErr = document.getElementById('emailError');
-visible'); valid = false; }
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRe.test(email)) { emailErr.classList.add('visible'); valid = false; }
 else { emailErr.classList.remove('visible'); }
-encodeURIComponent(r.subject)}&body=${encodeURIComponent(r.body)}`;
-window.location.href = mailto;
+return valid;
+}
 
+async function sendEmail() {
+if (!validate()) return;
+const r = RECIPIENTS[currentRecipient];
+const mailto = `mailto:${r.email}?subject=${encodeURIComponent(r.subject)}&body=${encodeURIComponent(r.body)}`;
+window.location.href = mailto;
 setTimeout(async () => {
 document.getElementById('successMsg').classList.add('visible');
 document.getElementById('sendBtn').disabled = true;
@@ -479,7 +1016,6 @@ await incrementCounter();
 }, 800);
 }
 
-// Supabase config
 const SUPABASE_URL = 'https://wtnhqkkqohxfdlkpwtks.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind0bmhxa2txb2h4ZmRsa3B3dGtzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0Mzg3ODIsImV4cCI6MjA5MjAxNDc4Mn0.Jc2H3hWqa9hFJijBiS-i9-nnNfywgcMsc5pXCx2Af9o';
 
@@ -531,8 +1067,7 @@ return;
 const isAdmin = sessionStorage.getItem('adminAuth') === 'true';
 list.innerHTML = data.map(v => {
 const date = new Date(v.created_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' });
-const adminBtns = isAdmin ? `
-<div class="admin-btns">
+const adminBtns = isAdmin ? `<div class="admin-btns">
 <button class="admin-approve-btn" onclick="approveVoice('${v.id}')">✓ Approve</button>
 <button class="admin-delete-btn" onclick="deleteVoice('${v.id}')">✕ Delete</button>
 </div>` : '';
@@ -543,18 +1078,19 @@ document.getElementById('voicesList').innerHTML = '<p class="voices-loading">Cou
 }
 }
 
-async function approveVoice(id) {
+async function approveVoice(id, isAdmin = false) {
 await sbFetch(`voices?id=eq.${id}`, {
 method: 'PATCH',
 body: JSON.stringify({ approved: true })
 });
-document.getElementById(`voice-${id}`).style.borderLeftColor = '#4CAF50';
+if (isAdmin) loadAdminVoices();
+else { const card = document.getElementById(`voice-${id}`); if (card) card.style.borderLeftColor = '#4CAF50'; }
 }
 
-async function deleteVoice(id) {
+async function deleteVoice(id, isAdmin = false) {
 if (!confirm('Delete this comment?')) return;
 await sbFetch(`voices?id=eq.${id}`, { method: 'DELETE' });
-const card = document.getElementById(`voice-${id}`);
+const card = document.getElementById(isAdmin ? `admin-voice-${id}` : `voice-${id}`);
 if (card) card.remove();
 }
 
@@ -582,12 +1118,6 @@ function escapeHtml(str) {
 return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// Character counter
-document.getElementById('voiceInput').addEventListener('input', function() {
-document.getElementById('charCount').textContent = 280 - this.value.length;
-});
-
-// Admin panel
 const ADMIN_PASSWORD = 'Pepper11.';
 
 function adminLogin() {
@@ -628,23 +1158,10 @@ return `<div class="voice-card" id="admin-voice-${v.id}">
 }).join('');
 }
 
-async function approveVoice(id, isAdmin = false) {
-await sbFetch(`voices?id=eq.${id}`, {
-method: 'PATCH',
-body: JSON.stringify({ approved: true })
+document.getElementById('voiceInput').addEventListener('input', function() {
+document.getElementById('charCount').textContent = 280 - this.value.length;
 });
-if (isAdmin) loadAdminVoices();
-else { const card = document.getElementById(`voice-${id}`); if (card) card.style.borderLeftColor = '#4CAF50'; }
-}
 
-async function deleteVoice(id, isAdmin = false) {
-if (!confirm('Delete this comment?')) return;
-await sbFetch(`voices?id=eq.${id}`, { method: 'DELETE' });
-const card = document.getElementById(isAdmin ? `admin-voice-${id}` : `voice-${id}`);
-if (card) card.remove();
-}
-
-// Check URL for admin access
 if (window.location.search.includes('admin')) {
 if (sessionStorage.getItem('adminAuth') === 'true') {
 document.getElementById('adminPanel').style.display = 'block';
@@ -654,7 +1171,6 @@ document.getElementById('adminLogin').style.display = 'block';
 }
 }
 
-// Init
 loadCounter();
 loadVoices();
 </script>
