@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Resources | Hands Off Our Maps" />
+<meta property="og:description" content="Key resources on Alberta's electoral boundary fight." />
+<meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
+<meta property="og:url" content="https://handsoffourmaps.ca/resources" />
+<title>Resources | Hands Off Our Maps</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--red: #C8102E;
+--dark-red: #8B0A1E;
+--black: #0D0D0D;
+--ink: #F0EDE6;
+--muted: #A89E90;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+background: #111111;
+color: var(--ink);
+font-family: 'Source Serif 4', Georgia, serif;
+font-weight: 400;
+line-height: 1.7;
+min-height: 100vh;
+}
+
+header {
+background: var(--black);
+border-bottom: 4px solid var(--red);
+padding: 0;
+}
+
+.masthead {
+max-width: 900px;
+margin: 0 auto;
+padding: 18px 24px 14px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+}
+
+.masthead-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.maple-icon {
+width: 100px;
+height: 100px;
+object-fit: contain;
+animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+0%, 100% { transform: rotate(-3deg); }
+50% { transform: rotate(3deg); }
+}
+
+.pub-name {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.6rem;
+color: #FFFFFF;
+letter-spacing: 0.01em;
+line-height: 1;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.pub-name span { color: var(--red); }
+
+.pub-tagline {
+font-family: 'Space Mono', monospace;
+font-size: 0.6rem;
+color: var(--muted);
+letter-spacing: 0.12em;
+text-transform: uppercase;
+margin-top: 3px;
+}
+
+nav {
+display: flex;
+gap: 16px;
+}
+
+nav a {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.15em;
+text-transform: uppercase;
+text-decoration: none;
+transition: color 0.2s;
+}
+
+nav a:hover { color: var(--red); }
+nav a.active { color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+
+.hero {
+background: var(--black);
+padding: 56px 24px 48px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: repeating-linear-gradient(
+0deg,
+transparent,
+transparent 40px,
+rgba(200, 16, 46, 0.04) 40px,
+rgba(200, 16, 46, 0.04) 41px
+);
+pointer-events: none;
+}
+
+.hero-eyebrow {
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--red);
+margin-bottom: 18px;
+}
+
+.hero-headline {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: clamp(2rem, 5vw, 3.2rem);
+color: #FFFFFF;
+line-height: 1.12;
+max-width: 740px;
+margin: 0 auto;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+
+.rule-bold {
+border: none;
+border-top: 3px solid var(--red);
+margin: 0;
+}
+
+.content {
+max-width: 780px;
+margin: 0 auto;
+padding: 64px 24px 80px;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+text-decoration: none;
+border: 1px solid var(--red);
+color: var(--red);
+padding: 8px 16px;
+border-radius: 2px;
+margin-bottom: 48px;
+transition: all 0.2s;
+}
+
+.back-btn:hover { border-color: white; color: white; }
+
+.section-title {
+font-family: 'Anton', sans-serif;
+font-size: 1.4rem;
+text-transform: uppercase;
+color: var(--ink);
+letter-spacing: 0.03em;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 2px solid var(--red);
+}
+
+.resource-group {
+margin-bottom: 52px;
+}
+
+.resource-card {
+background: #1E1E1E;
+border: 1px solid #2A2A2A;
+border-left: 3px solid var(--red);
+padding: 20px 24px;
+margin-bottom: 14px;
+text-decoration: none;
+display: block;
+transition: border-color 0.2s, background 0.2s;
+}
+
+.resource-card:hover {
+background: #252525;
+border-left-color: white;
+}
+
+.resource-card-label {
+font-family: 'Space Mono', monospace;
+font-size: 0.58rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(--red);
+margin-bottom: 6px;
+}
+
+.resource-card-title {
+font-family: 'Anton', sans-serif;
+font-size: 1.1rem;
+text-transform: uppercase;
+color: var(--ink);
+letter-spacing: 0.02em;
+margin-bottom: 8px;
+}
+
+.resource-card-desc {
+font-family: 'Public Sans', sans-serif;
+font-size: 0.88rem;
+color: #A89E90;
+line-height: 1.6;
+}
+
+.resource-card-arrow {
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+color: var(--red);
+margin-top: 10px;
+display: block;
+}
+
+.explainer {
+background: #1A1A1A;
+border-top: 3px solid var(--red);
+padding: 28px;
+margin-bottom: 52px;
+}
+
+.explainer h3 {
+font-family: 'Anton', sans-serif;
+font-size: 1.1rem;
+text-transform: uppercase;
+color: var(--ink);
+letter-spacing: 0.03em;
+margin-bottom: 14px;
+}
+
+.explainer p {
+font-family: 'Public Sans', sans-serif;
+font-size: 0.92rem;
+color: #C8BFB0;
+line-height: 1.75;
+margin-bottom: 12px;
+}
+
+.explainer p:last-child { margin-bottom: 0; }
+
+footer {
+background: var(--black);
+border-top: 4px solid var(--red);
+padding: 24px;
+text-align: center;
+}
+
+footer p {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="masthead">
+<div class="masthead-left">
+<img class="maple-icon" src="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776447469/unnamed_qsvv47.png" alt="Hands Off Our Maps protesters" />
+<div>
+<a href="/" class="pub-name">Hands Off <span>Our Maps</span></a>
+<div class="pub-tagline">Protect Alberta's Democracy</div>
+</div>
+</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/resources.html" class="active">Resources</a>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-eyebrow">✦ Know The Facts ✦</div>
+<h1 class="hero-headline">Resources</h1>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="content">
+<a href="/" class="back-btn">← Back to Campaign</a>
+
+<!-- Explainer -->
+<div class="resource-group">
+<h2 class="section-title">How The Electoral Boundaries Process Works</h2>
+<div class="explainer">
+<h3>What is the Electoral Boundaries Commission?</h3>
+<p>The Electoral Boundaries Commission is an independent, non-partisan body established under Alberta's Electoral Boundaries Commission Act. Its job is to review and recommend changes to provincial riding boundaries every two election cycles to reflect population growth and shifts.</p>
+<p>The 2025-2026 Commission was made up of five members: a chair appointed by the Lieutenant Governor in Council (on the advice of cabinet), two members appointed by the government, and two members appointed by the Official Opposition.</p>
+<p>The commission held public hearings across Alberta, released an interim report in October 2025, and submitted its final report to the Speaker of the Legislative Assembly on March 26, 2026. The majority report — signed by chair Justice Dallas Miller and the two NDP-appointed commissioners — recommended two new seats for Calgary, one for Edmonton, and the consolidation of two rural ridings.</p>
+<h3 style="margin-top: 20px;">What happened next?</h3>
+<p>The two UCP-appointed commissioners issued a minority report with an alternative map designed to create sprawling "rurban" ridings that would dilute urban votes. Justice Miller warned the approach was likely unconstitutional under Section 3 of the Charter. Justice Minister Mickey Amery, who had previously committed to respecting the independent process, reversed course and said "all options are on the table."</p>
+<p>This is unprecedented in Alberta's electoral history. Minority reports from government-appointed commissioners complete with alternative maps have never happened before.</p>
+</div>
+</div>
+
+<!-- Official Documents -->
+<div class="resource-group">
+<h2 class="section-title">Official Documents</h2>
+
+<a class="resource-card" href="https://www.assembly.ab.ca/docs/default-source/about-documents/legislative-assembly-office/other-reports/ebcfinalreport.pdf" target="_blank">
+<div class="resource-card-label">PDF Document</div>
+<div class="resource-card-title">The Final Report of the 2025-2026 Electoral Boundaries Commission</div>
+<div class="resource-card-desc">The full 285-page majority report submitted to the Speaker of the Legislative Assembly on March 26, 2026. Includes the minority report as Appendix E.</div>
+<span class="resource-card-arrow">Read the report →</span>
+</a>
+
+<a class="resource-card" href="https://abebc.ca/reports/" target="_blank">
+<div class="resource-card-label">Official Website</div>
+<div class="resource-card-title">Alberta Electoral Boundaries Commission — Reports Page</div>
+<div class="resource-card-desc">The official commission website with the final report, interim report, and boundary maps for all ridings.</div>
+<span class="resource-card-arrow">Visit abebc.ca →</span>
+</a>
+
+<a class="resource-card" href="https://abebc.ca/reports/maps/" target="_blank">
+<div class="resource-card-label">Maps</div>
+<div class="resource-card-title">Proposed Riding Boundary Maps</div>
+<div class="resource-card-desc">PDF maps showing the majority report's proposed boundaries for Calgary, Edmonton, and the rest of Alberta.</div>
+<span class="resource-card-arrow">View maps →</span>
+</a>
+</div>
+
+<!-- News Coverage -->
+<div class="resource-group">
+<h2 class="section-title">News Coverage</h2>
+
+<a class="resource-card" href="https://ablawg.ca/2026/04/13/the-minority-report-on-electoral-districts-will-the-law-protect-alberta-from-ucp-gerrymandering/" target="_blank">
+<div class="resource-card-label">ABLawg — Legal Analysis</div>
+<div class="resource-card-title">Will the Law Protect Alberta from UCP Gerrymandering?</div>
+<div class="resource-card-desc">A detailed legal breakdown of the minority report and what constitutional guardrails exist to prevent partisan boundary manipulation.</div>
+<span class="resource-card-arrow">Read the analysis →</span>
+</a>
+
+<a class="resource-card" href="https://globalnews.ca/news/11747489/alberta-electoral-boundaries-commission-recommends-more-ridings-boundary-changes/" target="_blank">
+<div class="resource-card-label">Global News</div>
+<div class="resource-card-title">Alberta Electoral Boundaries Commission Recommends More Ridings, Boundary Changes</div>
+<div class="resource-card-desc">Coverage of the final report release and the NDP's warnings about the minority report's gerrymandering implications.</div>
+<span class="resource-card-arrow">Read the article →</span>
+</a>
+
+<a class="resource-card" href="https://parliamentum.org/2026/03/30/albertas-provincial-electoral-boundaries-commission/" target="_blank">
+<div class="resource-card-label">In-Depth Analysis</div>
+<div class="resource-card-title">The Final Report Contains a Clumsy Conservative Gerrymander</div>
+<div class="resource-card-desc">A detailed analysis of the minority report's proposed maps and how they compare to the majority recommendations.</div>
+<span class="resource-card-arrow">Read the analysis →</span>
+</a>
+</div>
+
+<!-- Take Further Action -->
+<div class="resource-group">
+<h2 class="section-title">Take Further Action</h2>
+
+<a class="resource-card" href="https://foralbertaforcanada.ca/" target="_blank">
+<div class="resource-card-label">Campaign</div>
+<div class="resource-card-title">For Alberta, For Canada</div>
+<div class="resource-card-desc">The NDP-led pro-Canada campaign mobilizing Albertans ahead of a possible separation referendum. Open to everyone regardless of political affiliation. Sign up, volunteer, and take part in upcoming days of action.</div>
+<span class="resource-card-arrow">Join the campaign →</span>
+</a>
+
+<a class="resource-card" href="https://www.forever-canadian.ca/en" target="_blank">
+<div class="resource-card-label">Petition</div>
+<div class="resource-card-title">Forever Canadian</div>
+<div class="resource-card-desc">Former PC deputy premier Thomas Lukaszuk's citizen initiative petition, which gathered over 404,000 signatures in support of Alberta remaining in Canada.</div>
+<span class="resource-card-arrow">Learn more →</span>
+</a>
+</div>
+
+</div>
+
+<footer>
+<p>Hands Off Our Maps &nbsp;·&nbsp; Civic Action</p>
+</footer>
+
+</body>
+</html>
