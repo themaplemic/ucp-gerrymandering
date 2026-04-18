@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Statement Tracker | Hands Off Our Maps" />
+<meta property="og:description" content="Tracking what Alberta politicians say and when they say it." />
+<meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
+<meta property="og:url" content="https://handsoffourmaps.ca/statements.html" />
+<title>Statement Tracker | Hands Off Our Maps</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --red: #C8102E; --dark-red: #8B0A1E; --black: #0D0D0D; --ink: #F0EDE6; --muted: #A89E90; }
+html { scroll-behavior: smooth; }
+body { background: #111111; color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; line-height: 1.7; min-height: 100vh; }
+header { background: var(--black); border-bottom: 4px solid var(--red); }
+.masthead { max-width: 900px; margin: 0 auto; padding: 18px 24px 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.masthead-left { display: flex; align-items: center; gap: 14px; }
+.maple-icon { width: 100px; height: 100px; object-fit: contain; animation: sway 4s ease-in-out infinite; }
+@keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+.pub-name { font-family: 'Anton', sans-serif; font-size: 1.6rem; color: #FFF; letter-spacing: 0.01em; text-transform: uppercase; text-decoration: none; }
+.pub-name span { color: var(--red); }
+.pub-tagline { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 3px; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+nav a:hover { color: var(--red); }
+nav a.active { color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+.hero { background: var(--black); padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(200,16,46,0.04) 40px, rgba(200,16,46,0.04) 41px); pointer-events: none; }
+.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 18px; }
+.hero-headline { font-family: 'Anton', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #FFF; line-height: 1.12; max-width: 740px; margin: 0 auto 16px; letter-spacing: 0.02em; text-transform: uppercase; }
+.hero-sub { font-family: 'Public Sans', sans-serif; font-weight: 300; font-size: 0.95rem; color: #C8BFB0; max-width: 580px; margin: 0 auto; text-transform: uppercase; letter-spacing: 0.1em; }
+.rule-bold { border: none; border-top: 3px solid var(--red); margin: 0; }
+.content { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+.back-btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--red); color: var(--red); padding: 8px 16px; border-radius: 2px; margin-bottom: 36px; transition: all 0.2s; }
+.back-btn:hover { border-color: white; color: white; }
+.filters { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+.filter-btn { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; border: 1px solid #444; background: #111; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+.filter-btn:hover { border-color: var(--red); color: var(--ink); }
+.filter-btn.active { background: var(--red); border-color: var(--red); color: white; }
+.statements-list { display: flex; flex-direction: column; gap: 16px; }
+.statement-card { background: #1E1E1E; border: 1px solid #2A2A2A; border-left: 4px solid var(--red); padding: 22px 24px; }
+.statement-card.ndp { border-left-color: #F4A800; }
+.statement-meta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.statement-party { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+.statement-party.ucp { background: var(--red); color: white; }
+.statement-party.ndp { background: #F4A800; color: #111; }
+.statement-category { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid #444; padding: 3px 8px; border-radius: 2px; }
+.statement-date { font-family: 'Space Mono', monospace; font-size: 0.58rem; color: var(--muted); letter-spacing: 0.08em; }
+.statement-person { font-family: 'Anton', sans-serif; font-size: 1.1rem; text-transform: uppercase; color: var(--ink); letter-spacing: 0.02em; margin-bottom: 10px; }
+.statement-quote { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1rem; color: #C8BFB0; line-height: 1.65; margin-bottom: 10px; }
+.statement-source { font-family: 'Space Mono', monospace; font-size: 0.58rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.statement-delete { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; background: none; border: 1px solid #444; color: var(--muted); padding: 4px 10px; cursor: pointer; border-radius: 2px; margin-top: 10px; display: none; transition: all 0.2s; }
+.statement-delete:hover { border-color: var(--red); color: var(--red); }
+.admin-mode .statement-delete { display: inline-block; }
+.loading { font-family: 'Public Sans', sans-serif; color: var(--muted); font-size: 0.9rem; padding: 24px 0; }
+.empty { font-family: 'Public Sans', sans-serif; color: var(--muted); font-size: 0.9rem; padding: 24px 0; }
+
+/* Admin panel */
+#adminPanel, #adminLogin {
+background: #0D0D0D;
+border-top: 3px solid var(--red);
+padding: 40px 24px;
+}
+.admin-inner, .admin-login-box { max-width: 700px; margin: 0 auto; }
+.admin-login-box { max-width: 400px; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.admin-title { font-family: 'Anton', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: var(--red); letter-spacing: 0.03em; }
+.admin-logout { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid #444; color: var(--muted); padding: 6px 14px; cursor: pointer; border-radius: 2px; transition: all 0.2s; }
+.admin-logout:hover { border-color: var(--red); color: var(--red); }
+.admin-form { background: #1A1A1A; border: 1px solid #333; border-top: 3px solid var(--red); padding: 24px; }
+.admin-form label { display: block; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; margin-top: 16px; }
+.admin-form label:first-child { margin-top: 0; }
+.admin-form input, .admin-form select, .admin-form textarea { width: 100%; padding: 10px 12px; background: #111; border: 1px solid #444; color: var(--ink); font-family: 'Public Sans', sans-serif; font-size: 0.9rem; border-radius: 2px; outline: none; }
+.admin-form textarea { height: 100px; resize: vertical; }
+.admin-form input:focus, .admin-form select:focus, .admin-form textarea:focus { border-color: var(--red); }
+.admin-submit { margin-top: 20px; font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: white; border: none; padding: 12px 24px; cursor: pointer; border-radius: 2px; transition: background 0.2s; }
+.admin-submit:hover { background: var(--dark-red); }
+.admin-success { font-family: 'Public Sans', sans-serif; font-size: 0.85rem; color: #4CAF50; margin-top: 12px; display: none; }
+#adminLogin input[type="password"] { width: 100%; padding: 10px 12px; background: #111; border: 1px solid #444; color: var(--ink); font-family: 'Public Sans', sans-serif; font-size: 0.9rem; border-radius: 2px; outline: none; margin-top: 16px; margin-bottom: 12px; }
+footer { background: var(--black); border-top: 4px solid var(--red); padding: 24px; text-align: center; }
+footer p { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<header>
+<div class="masthead">
+<div class="masthead-left">
+<img class="maple-icon" src="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776447469/unnamed_qsvv47.png" alt="Hands Off Our Maps" />
+<div>
+<a href="/" class="pub-name">Hands Off <span>Our Maps</span></a>
+<div class="pub-tagline">Protect Alberta's Democracy</div>
+</div>
+</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/resources.html">Resources</a>
+<a href="/mla-tracker.html">Contact Your MLA</a>
+<a href="/statements.html" class="active">Statement Tracker</a>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-eyebrow">Accountability</div>
+<h1 class="hero-headline">Statement Tracker</h1>
+<p class="hero-sub">What they said. When they said it. We are keeping track.</p>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="content">
+<a href="/" class="back-btn">Back to Campaign</a>
+
+<div class="filters" id="filterBar">
+<button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+<button class="filter-btn" onclick="setFilter('Gerrymandering', this)">Gerrymandering</button>
+<button class="filter-btn" onclick="setFilter('Trans Rights', this)">Trans Rights</button>
+<button class="filter-btn" onclick="setFilter('Education', this)">Education</button>
+<button class="filter-btn" onclick="setFilter('Notwithstanding', this)">Notwithstanding</button>
+<button class="filter-btn" onclick="setFilter('Separation', this)">Separation</button>
+<button class="filter-btn" onclick="setFilter('Other', this)">Other</button>
+</div>
+
+<div class="statements-list" id="statementsList">
+<p class="loading">Loading statements...</p>
+</div>
+</div>
+
+<!-- Admin Login -->
+<div id="adminLogin" style="display:none;">
+<div class="admin-login-box">
+<h2 class="admin-title">Admin Access</h2>
+<input type="password" id="adminPasswordInput" placeholder="Enter password" />
+<button class="admin-submit" onclick="adminLogin()">Enter</button>
+</div>
+</div>
+
+<!-- Admin Panel -->
+<div id="adminPanel" style="display:none;">
+<div class="admin-inner">
+<div class="admin-header">
+<h2 class="admin-title">Add Statement</h2>
+<button class="admin-logout" onclick="adminLogout()">Log Out</button>
+</div>
+<div class="admin-form">
+<label>Date</label>
+<input type="date" id="stmtDate" />
+
+<label>Person</label>
+<input type="text" id="stmtPerson" placeholder="e.g. Mickey Amery" />
+
+<label>Party</label>
+<select id="stmtParty">
+<option value="UCP">UCP</option>
+<option value="NDP">NDP</option>
+</select>
+
+<label>Category</label>
+<select id="stmtCategory">
+<option value="Gerrymandering">Gerrymandering</option>
+<option value="Trans Rights">Trans Rights</option>
+<option value="Education">Education</option>
+<option value="Notwithstanding">Notwithstanding</option>
+<option value="Separation">Separation</option>
+<option value="Other">Other</option>
+</select>
+
+<label>Quote</label>
+<textarea id="stmtQuote" placeholder="What they said..."></textarea>
+
+<label>Source (outlet name only)</label>
+<input type="text" id="stmtSource" placeholder="e.g. CBC News" />
+
+<button class="admin-submit" onclick="addStatement()">Add Statement</button>
+<p class="admin-success" id="adminSuccess">Statement added!</p>
+</div>
+</div>
+</div>
+
+<footer>
+<p>Hands Off Our Maps &nbsp; Civic Action</p>
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://wtnhqkkqohxfdlkpwtks.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind0bmhxa2txb2h4ZmRsa3B3dGtzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0Mzg3ODIsImV4cCI6MjA5MjAxNDc4Mn0.Jc2H3hWqa9hFJijBiS-i9-nnNfywgcMsc5pXCx2Af9o';
+const ADMIN_PASSWORD = 'Pepper11.';
+
+let currentFilter = 'all';
+let isAdmin = false;
+
+async function sbFetch(path, options = {}) {
+const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+headers: {
+'apikey': SUPABASE_KEY,
+'Authorization': `Bearer ${SUPABASE_KEY}`,
+'Content-Type': 'application/json',
+'Prefer': 'return=representation',
+...options.headers
+},
+...options
+});
+return res.json();
+}
+
+async function loadStatements() {
+const list = document.getElementById('statementsList');
+list.innerHTML = '<p class="loading">Loading statements...</p>';
+try {
+let path = 'statements?select=*&order=date.desc';
+if (currentFilter !== 'all') {
+path += `&category=eq.${encodeURIComponent(currentFilter)}`;
+}
+const data = await sbFetch(path);
+if (!data || data.length === 0) {
+list.innerHTML = '<p class="empty">No statements yet.</p>';
+return;
+}
+if (isAdmin) list.classList.add('admin-mode');
+else list.classList.remove('admin-mode');
+list.innerHTML = data.map(s => {
+const partyClass = s.party === 'NDP' ? 'ndp' : 'ucp';
+const date = new Date(s.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+return `<div class="statement-card ${partyClass}" id="stmt-${s.id}">
+<div class="statement-meta">
+<span class="statement-party ${partyClass}">${s.party}</span>
+<span class="statement-category">${s.category}</span>
+<span class="statement-date">${date}</span>
+</div>
+<div class="statement-person">${escapeHtml(s.person)}</div>
+<div class="statement-quote">"${escapeHtml(s.quote)}"</div>
+<div class="statement-source">Source: ${escapeHtml(s.source)}</div>
+${isAdmin ? `<button class="statement-delete" onclick="deleteStatement('${s.id}')">Delete</button>` : ''}
+</div>`;
+}).join('');
+} catch(e) {
+list.innerHTML = '<p class="empty">Could not load statements.</p>';
+}
+}
+
+async function addStatement() {
+const date = document.getElementById('stmtDate').value;
+const person = document.getElementById('stmtPerson').value.trim();
+const party = document.getElementById('stmtParty').value;
+const category = document.getElementById('stmtCategory').value;
+const quote = document.getElementById('stmtQuote').value.trim();
+const source = document.getElementById('stmtSource').value.trim();
+if (!date || !person || !quote || !source) { alert('Please fill in all fields.'); return; }
+const btn = document.querySelector('.admin-submit');
+btn.textContent = 'Adding...';
+btn.disabled = true;
+try {
+await sbFetch('statements', {
+method: 'POST',
+body: JSON.stringify({ date, person, party, category, quote, source })
+});
+document.getElementById('stmtDate').value = '';
+document.getElementById('stmtPerson').value = '';
+document.getElementById('stmtQuote').value = '';
+document.getElementById('stmtSource').value = '';
+const success = document.getElementById('adminSuccess');
+success.style.display = 'block';
+setTimeout(() => success.style.display = 'none', 3000);
+await loadStatements();
+} catch(e) { alert('Failed to add statement.'); }
+btn.textContent = 'Add Statement';
+btn.disabled = false;
+}
+
+async function deleteStatement(id) {
+if (!confirm('Delete this statement?')) return;
+await sbFetch(`statements?id=eq.${id}`, { method: 'DELETE' });
+const card = document.getElementById(`stmt-${id}`);
+if (card) card.remove();
+}
+
+function setFilter(filter, btn) {
+currentFilter = filter;
+document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+loadStatements();
+}
+
+function adminLogin() {
+const pw = document.getElementById('adminPasswordInput').value;
+if (pw === ADMIN_PASSWORD) {
+isAdmin = true;
+sessionStorage.setItem('adminAuth', 'true');
+document.getElementById('adminLogin').style.display = 'none';
+document.getElementById('adminPanel').style.display = 'block';
+loadStatements();
+} else {
+alert('Incorrect password.');
+}
+}
+
+function adminLogout() {
+isAdmin = false;
+sessionStorage.removeItem('adminAuth');
+document.getElementById('adminPanel').style.display = 'none';
+loadStatements();
+}
+
+function escapeHtml(str) {
+if (!str) return '';
+return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Check for admin in URL
+if (window.location.search.includes('admin')) {
+if (sessionStorage.getItem('adminAuth') === 'true') {
+isAdmin = true;
+document.getElementById('adminPanel').style.display = 'block';
+} else {
+document.getElementById('adminLogin').style.display = 'block';
+}
+}
+
+loadStatements();
+</script>
+
+</body>
+</html>
