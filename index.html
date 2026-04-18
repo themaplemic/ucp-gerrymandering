@@ -617,10 +617,43 @@ transition: background 0.2s;
 
 .voices-submit:hover { background: var(--dark-red); }
 
+.voices-ticker-wrap {
+overflow: hidden;
+width: 100%;
+position: relative;
+}
+
+.voices-ticker-wrap::before,
+.voices-ticker-wrap::after {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+width: 60px;
+z-index: 2;
+pointer-events: none;
+}
+
+.voices-ticker-wrap::before { left: 0; background: linear-gradient(to right, #151515, transparent); }
+.voices-ticker-wrap::after { right: 0; background: linear-gradient(to left, #151515, transparent); }
+
 .voices-list {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+display: flex;
 gap: 16px;
+width: max-content;
+animation: ticker 30s linear infinite;
+}
+
+.voices-list:hover { animation-play-state: paused; }
+
+@keyframes ticker {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+
+.voice-card {
+min-width: 260px;
+max-width: 260px;
 }
 
 .voice-card {
@@ -851,8 +884,10 @@ The UCP Is Trying to <span class="rig-part">Rig</span> Alberta's Electoral Map
 </div>
 </div>
 
+<div class="voices-ticker-wrap">
 <div class="voices-list" id="voicesList">
 <p class="voices-loading">Loading voices...</p>
+</div>
 </div>
 </div>
 </section>
@@ -1162,7 +1197,7 @@ return `<div class="voice-card" id="admin-voice-${v.id}">
 </div>`;
 }).join('');
 }
-
+list.innerHTML += list.innerHTML; // duplicate for seamless loop
 document.getElementById('voiceInput').addEventListener('input', function() {
 document.getElementById('charCount').textContent = 280 - this.value.length;
 });
