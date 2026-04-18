@@ -1,0 +1,273 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Contact Your MLA | Hands Off Our Maps" />
+<meta property="og:description" content="Find your MLA and make your voice heard on Alberta's electoral boundary fight." />
+<meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
+<meta property="og:url" content="https://handsoffourmaps.ca/mla-tracker.html" />
+<title>Contact Your MLA | Hands Off Our Maps</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --red: #C8102E; --dark-red: #8B0A1E; --black: #0D0D0D; --ink: #F0EDE6; --muted: #A89E90; }
+html { scroll-behavior: smooth; }
+body { background: #111111; color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; line-height: 1.7; min-height: 100vh; }
+header { background: var(--black); border-bottom: 4px solid var(--red); }
+.masthead { max-width: 900px; margin: 0 auto; padding: 18px 24px 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.masthead-left { display: flex; align-items: center; gap: 14px; }
+.maple-icon { width: 100px; height: 100px; object-fit: contain; animation: sway 4s ease-in-out infinite; }
+@keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+.pub-name { font-family: 'Anton', sans-serif; font-size: 1.6rem; color: #FFF; letter-spacing: 0.01em; text-transform: uppercase; text-decoration: none; }
+.pub-name span { color: var(--red); }
+.pub-tagline { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 3px; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+nav a:hover { color: var(--red); }
+nav a.active { color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+.hero { background: var(--black); padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(200,16,46,0.04) 40px, rgba(200,16,46,0.04) 41px); pointer-events: none; }
+.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 18px; }
+.hero-headline { font-family: 'Anton', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #FFF; line-height: 1.12; max-width: 740px; margin: 0 auto 16px; letter-spacing: 0.02em; text-transform: uppercase; }
+.hero-sub { font-family: 'Public Sans', sans-serif; font-weight: 300; font-size: 0.95rem; color: #C8BFB0; max-width: 580px; margin: 0 auto; text-transform: uppercase; letter-spacing: 0.1em; }
+.rule-bold { border: none; border-top: 3px solid var(--red); margin: 0; }
+.content { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+.back-btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--red); color: var(--red); padding: 8px 16px; border-radius: 2px; margin-bottom: 36px; transition: all 0.2s; }
+.back-btn:hover { border-color: white; color: white; }
+.legend { display: flex; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.legend-dot { width: 12px; height: 12px; border-radius: 2px; }
+.legend-dot.ucp { background: var(--red); }
+.legend-dot.ndp { background: #F4A800; }
+.legend-dot.ind { background: #888; }
+.filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.filter-btn { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; border: 1px solid #444; background: #111; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+.filter-btn:hover { border-color: var(--red); color: var(--ink); }
+.filter-btn.active { background: var(--red); border-color: var(--red); color: white; }
+.filter-btn.ndp-active { background: #F4A800; border-color: #F4A800; color: #111; }
+.search-bar { margin-bottom: 20px; }
+.search-bar input { width: 100%; padding: 14px 16px; background: #1E1E1E; border: 1px solid #444; border-left: 3px solid var(--red); color: var(--ink); font-family: 'Public Sans', sans-serif; font-size: 1rem; outline: none; border-radius: 2px; }
+.search-bar input::placeholder { color: var(--muted); }
+.results-count { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+.mla-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.mla-card { background: #1E1E1E; border: 1px solid #2A2A2A; border-left: 3px solid var(--red); padding: 18px 20px; }
+.mla-card.ndp { border-left-color: #F4A800; }
+.mla-card.ind { border-left-color: #888; }
+.mla-party { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; }
+.mla-party.ucp { color: var(--red); }
+.mla-party.ndp { color: #F4A800; }
+.mla-party.ind { color: #888; }
+.mla-riding { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.mla-name { font-family: 'Anton', sans-serif; font-size: 1.05rem; text-transform: uppercase; color: var(--ink); letter-spacing: 0.02em; margin-bottom: 12px; }
+.mla-email { display: inline-flex; align-items: center; gap: 6px; font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.06em; color: white; background: var(--red); padding: 6px 12px; text-decoration: none; border-radius: 2px; transition: opacity 0.2s; }
+.mla-email.ndp { background: #F4A800; color: #111; }
+.mla-email.ind { background: #555; }
+.mla-email:hover { opacity: 0.85; }
+.no-results { font-family: 'Public Sans', sans-serif; color: var(--muted); font-size: 0.9rem; grid-column: 1/-1; padding: 24px 0; }
+footer { background: var(--black); border-top: 4px solid var(--red); padding: 24px; text-align: center; }
+footer p { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<header>
+<div class="masthead">
+<div class="masthead-left">
+<img class="maple-icon" src="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776447469/unnamed_qsvv47.png" alt="Hands Off Our Maps" />
+<div>
+<a href="/" class="pub-name">Hands Off <span>Our Maps</span></a>
+<div class="pub-tagline">Protect Alberta's Democracy</div>
+</div>
+</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/resources.html">Resources</a>
+<a href="/mla-tracker.html" class="active">Contact Your MLA</a>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-eyebrow">Take Action</div>
+<h1 class="hero-headline">Contact Your MLA</h1>
+<p class="hero-sub">Search your riding and make your voice heard on Alberta's electoral boundary fight.</p>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="content">
+<a href="/" class="back-btn">Back to Campaign</a>
+
+<div class="legend">
+<div class="legend-item"><div class="legend-dot ucp"></div> UCP - urge them to implement the majority report</div>
+<div class="legend-item"><div class="legend-dot ndp"></div> NDP - thank them for standing up for democracy</div>
+<div class="legend-item"><div class="legend-dot ind"></div> Independent</div>
+</div>
+
+<div class="filters">
+<button class="filter-btn active" onclick="setFilter('all', this)">All MLAs</button>
+<button class="filter-btn" onclick="setFilter('UCP', this)">UCP Only</button>
+<button class="filter-btn" onclick="setFilter('NDP', this)">NDP Only</button>
+</div>
+
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Search by MLA name or riding..." oninput="renderFiltered()" />
+</div>
+
+<p class="results-count" id="resultsCount"></p>
+<div class="mla-grid" id="mlaGrid"></div>
+</div>
+
+<footer>
+<p>Hands Off Our Maps &nbsp; Civic Action</p>
+</footer>
+
+<script>
+const MLAS = [
+{ name: "Pete Guthrie", party: "UCP", riding: "Airdrie-Cochrane", email: "Airdrie.Cochrane@assembly.ab.ca" },
+{ name: "Angela Pitt", party: "UCP", riding: "Airdrie-East", email: "Airdrie.East@assembly.ab.ca" },
+{ name: "Glenn van Dijken", party: "UCP", riding: "Athabasca-Barrhead-Westlock", email: "Athabasca.Barrhead.Westlock@assembly.ab.ca" },
+{ name: "Sarah Elmeligi", party: "NDP", riding: "Banff-Kananaskis", email: "Banff.Kananaskis@assembly.ab.ca" },
+{ name: "Scott Cyr", party: "UCP", riding: "Bonnyville-Cold Lake-St. Paul", email: "Bonnyville.ColdLake.StPaul@assembly.ab.ca" },
+{ name: "Danielle Smith", party: "UCP", riding: "Brooks-Medicine Hat", email: "Brooks.MedicineHat@assembly.ab.ca" },
+{ name: "Diana Batten", party: "NDP", riding: "Calgary-Acadia", email: "Calgary.Acadia@assembly.ab.ca" },
+{ name: "Amanda Chapman", party: "NDP", riding: "Calgary-Beddington", email: "Calgary.Beddington@assembly.ab.ca" },
+{ name: "Irfan Sabir", party: "NDP", riding: "Calgary-Bhullar-McCall", email: "Calgary.Bhullar.McCall@assembly.ab.ca" },
+{ name: "Demetrios Nicolaides", party: "UCP", riding: "Calgary-Bow", email: "Calgary.Bow@assembly.ab.ca" },
+{ name: "Joe Ceci", party: "NDP", riding: "Calgary-Buffalo", email: "Calgary.Buffalo@assembly.ab.ca" },
+{ name: "Mickey Amery", party: "UCP", riding: "Calgary-Cross", email: "Calgary.Cross@assembly.ab.ca" },
+{ name: "Janet Eremenko", party: "NDP", riding: "Calgary-Currie", email: "Calgary.Currie@assembly.ab.ca" },
+{ name: "Peter Singh", party: "UCP", riding: "Calgary-East", email: "Calgary.East@assembly.ab.ca" },
+{ name: "Julia Hayter", party: "NDP", riding: "Calgary-Edgemont", email: "Calgary.Edgemont@assembly.ab.ca" },
+{ name: "Samir Kayande", party: "NDP", riding: "Calgary-Elbow", email: "Calgary.Elbow@assembly.ab.ca" },
+{ name: "Parmeet Boparai", party: "NDP", riding: "Calgary-Falconridge", email: "Calgary.Falconridge@assembly.ab.ca" },
+{ name: "Myles McDougall", party: "UCP", riding: "Calgary-Fish Creek", email: "Calgary.FishCreek@assembly.ab.ca" },
+{ name: "Court Ellingson", party: "NDP", riding: "Calgary-Foothills", email: "Calgary.Foothills@assembly.ab.ca" },
+{ name: "Nagwan Al-Guneid", party: "NDP", riding: "Calgary-Glenmore", email: "Calgary.Glenmore@assembly.ab.ca" },
+{ name: "Ric McIver", party: "UCP", riding: "Calgary-Hays", email: "Calgary.Hays@assembly.ab.ca" },
+{ name: "Lizette Tejada", party: "NDP", riding: "Calgary-Klein", email: "Calgary.Klein@assembly.ab.ca" },
+{ name: "Eric Bouchard", party: "UCP", riding: "Calgary-Lougheed", email: "Calgary.Lougheed@assembly.ab.ca" },
+{ name: "Kathleen Ganley", party: "NDP", riding: "Calgary-Mountain View", email: "Calgary.MountainView@assembly.ab.ca" },
+{ name: "Muhammad Yaseen", party: "UCP", riding: "Calgary-North", email: "Calgary.North@assembly.ab.ca" },
+{ name: "Gurinder Brar", party: "NDP", riding: "Calgary-North East", email: "Calgary.Northeast@assembly.ab.ca" },
+{ name: "Rajan Sawhney", party: "UCP", riding: "Calgary-North West", email: "Calgary.Northwest@assembly.ab.ca" },
+{ name: "Tanya Fir", party: "UCP", riding: "Calgary-Peigan", email: "Calgary.Peigan@assembly.ab.ca" },
+{ name: "Rebecca Schulz", party: "UCP", riding: "Calgary-Shaw", email: "Calgary.Shaw@assembly.ab.ca" },
+{ name: "Matt Jones", party: "UCP", riding: "Calgary-South East", email: "Calgary.SouthEast@assembly.ab.ca" },
+{ name: "Luanne Metz", party: "NDP", riding: "Calgary-Varsity", email: "Calgary.Varsity@assembly.ab.ca" },
+{ name: "Mike Ellis", party: "UCP", riding: "Calgary-West", email: "Calgary.West@assembly.ab.ca" },
+{ name: "Jackie Lovely", party: "UCP", riding: "Camrose", email: "Camrose@assembly.ab.ca" },
+{ name: "Joseph Schow", party: "UCP", riding: "Cardston-Siksika", email: "Cardston.Siksika@assembly.ab.ca" },
+{ name: "Todd Loewen", party: "UCP", riding: "Central Peace-Notley", email: "CentralPeace.Notley@assembly.ab.ca" },
+{ name: "Chantelle de Jonge", party: "UCP", riding: "Chestermere-Strathmore", email: "Chestermere.Strathmore@assembly.ab.ca" },
+{ name: "Justin Wright", party: "UCP", riding: "Cypress-Medicine Hat", email: "Cypress.MedicineHat@assembly.ab.ca" },
+{ name: "Andrew Boitchenko", party: "UCP", riding: "Drayton Valley-Devon", email: "DraytonValley.Devon@assembly.ab.ca" },
+{ name: "Nate Horner", party: "UCP", riding: "Drumheller-Stettler", email: "Drumheller.Stettler@assembly.ab.ca" },
+{ name: "Peggy Wright", party: "NDP", riding: "Edmonton-Beverly-Clareview", email: "Edmonton.BeverlyClareview@assembly.ab.ca" },
+{ name: "Nicole Goehring", party: "NDP", riding: "Edmonton-Castle Downs", email: "Edmonton.Castledowns@assembly.ab.ca" },
+{ name: "David Shepherd", party: "NDP", riding: "Edmonton-City Centre", email: "Edmonton.CityCentre@assembly.ab.ca" },
+{ name: "Sharif Haji", party: "NDP", riding: "Edmonton-Decore", email: "Edmonton.Decore@assembly.ab.ca" },
+{ name: "Gurtej Brar", party: "NDP", riding: "Edmonton-Ellerslie", email: "Edmonton.Ellerslie@assembly.ab.ca" },
+{ name: "Sarah Hoffman", party: "NDP", riding: "Edmonton-Glenora", email: "Edmonton.Glenora@assembly.ab.ca" },
+{ name: "Marlin Schmidt", party: "NDP", riding: "Edmonton-Gold Bar", email: "Edmonton.Goldbar@assembly.ab.ca" },
+{ name: "Janis Irwin", party: "NDP", riding: "Edmonton-Highlands-Norwood", email: "Edmonton.HighlandsNorwood@assembly.ab.ca" },
+{ name: "Heather Sweet", party: "NDP", riding: "Edmonton-Manning", email: "Edmonton.Manning@assembly.ab.ca" },
+{ name: "Lorne Dach", party: "NDP", riding: "Edmonton-McClung", email: "Edmonton.McClung@assembly.ab.ca" },
+{ name: "Jasvir Deol", party: "NDP", riding: "Edmonton-Meadows", email: "Edmonton.Meadows@assembly.ab.ca" },
+{ name: "Christina Gray", party: "NDP", riding: "Edmonton-Mill Woods", email: "Edmonton.Millwoods@assembly.ab.ca" },
+{ name: "David Eggen", party: "NDP", riding: "Edmonton-North West", email: "Edmonton.Northwest@assembly.ab.ca" },
+{ name: "Lori Sigurdson", party: "NDP", riding: "Edmonton-Riverview", email: "Edmonton.Riverview@assembly.ab.ca" },
+{ name: "Jodi Calahoo Stonehouse", party: "NDP", riding: "Edmonton-Rutherford", email: "Edmonton.Rutherford@assembly.ab.ca" },
+{ name: "Rhiannon Hoyle", party: "NDP", riding: "Edmonton-South", email: "Edmonton.South@assembly.ab.ca" },
+{ name: "Nathan Ip", party: "NDP", riding: "Edmonton-South West", email: "Edmonton.SouthWest@assembly.ab.ca" },
+{ name: "Naheed Nenshi", party: "NDP", riding: "Edmonton-Strathcona", email: "Edmonton.Strathcona@assembly.ab.ca" },
+{ name: "Brooks Arcand-Paul", party: "NDP", riding: "Edmonton-West Henday", email: "Edmonton.WestHenday@assembly.ab.ca" },
+{ name: "Rakhi Pancholi", party: "NDP", riding: "Edmonton-Whitemud", email: "Edmonton.Whitemud@assembly.ab.ca" },
+{ name: "Brian Jean", party: "UCP", riding: "Fort McMurray-Lac La Biche", email: "FortMcMurray.LacLaBiche@assembly.ab.ca" },
+{ name: "Tany Yao", party: "UCP", riding: "Fort McMurray-Wood Buffalo", email: "FortMcMurray.WoodBuffalo@assembly.ab.ca" },
+{ name: "Jackie Armstrong-Homeniuk", party: "UCP", riding: "Fort Saskatchewan-Vegreville", email: "FortSaskatchewan.Vegreville@assembly.ab.ca" },
+{ name: "Nolan Dyck", party: "UCP", riding: "Grande Prairie", email: "GrandePrairie@assembly.ab.ca" },
+{ name: "Ron Wiebe", party: "UCP", riding: "Grande Prairie-Wapiti", email: "GrandePrairie.Wapiti@assembly.ab.ca" },
+{ name: "R.J. Sigurdson", party: "UCP", riding: "Highwood", email: "Highwood@assembly.ab.ca" },
+{ name: "Devin Dreeshen", party: "UCP", riding: "Innisfail-Sylvan Lake", email: "Innisfail.SylvanLake@assembly.ab.ca" },
+{ name: "Shane Getson", party: "UCP", riding: "Lac Ste. Anne-Parkland", email: "LacSteAnne.Parkland@assembly.ab.ca" },
+{ name: "Jennifer Johnson", party: "UCP", riding: "Lacombe-Ponoka", email: "Lacombe.Ponoka@assembly.ab.ca" },
+{ name: "Brandon Lunty", party: "UCP", riding: "Leduc-Beaumont", email: "Leduc.Beaumont@assembly.ab.ca" },
+{ name: "Scott Sinclair", party: "IND", riding: "Lesser Slave Lake", email: "Lesser.SlaveLake@assembly.ab.ca" },
+{ name: "Nathan Neudorf", party: "UCP", riding: "Lethbridge-East", email: "Lethbridge.East@assembly.ab.ca" },
+{ name: "Rob Miyashiro", party: "NDP", riding: "Lethbridge-West", email: "Lethbridge.West@assembly.ab.ca" },
+{ name: "Chelsae Petrovic", party: "UCP", riding: "Livingstone-Macleod", email: "Livingstone.Macleod@assembly.ab.ca" },
+{ name: "Rick Wilson", party: "UCP", riding: "Maskwacis-Wetaskiwin", email: "Maskwacis.Wetaskiwin@assembly.ab.ca" },
+{ name: "Dale Nally", party: "UCP", riding: "Morinville-St. Albert", email: "Morinville.StAlbert@assembly.ab.ca" },
+{ name: "Tara Sawyer", party: "UCP", riding: "Olds-Didsbury-Three Hills", email: "OldsDidsbury.ThreeHills@assembly.ab.ca" },
+{ name: "Dan Williams", party: "UCP", riding: "Peace River", email: "Peace.River@assembly.ab.ca" },
+{ name: "Adriana LaGrange", party: "UCP", riding: "Red Deer-North", email: "RedDeer.North@assembly.ab.ca" },
+{ name: "Jason Stephan", party: "UCP", riding: "Red Deer-South", email: "RedDeer.South@assembly.ab.ca" },
+{ name: "Jason Nixon", party: "UCP", riding: "Rimbey-Rocky Mountain House-Sundre", email: "Rimbey.RockyMountainhouse.Sundre@assembly.ab.ca" },
+{ name: "Kyle Kasawski", party: "NDP", riding: "Sherwood Park", email: "Sherwood.Park@assembly.ab.ca" },
+{ name: "Searle Turton", party: "UCP", riding: "Spruce Grove-Stony Plain", email: "SpruceGrove.StonyPlain@assembly.ab.ca" },
+{ name: "Marie Renaud", party: "NDP", riding: "St. Albert", email: "St.Albert@assembly.ab.ca" },
+{ name: "Nate Glubish", party: "UCP", riding: "Strathcona-Sherwood Park", email: "Strathcona.Sherwoodpark@assembly.ab.ca" },
+{ name: "Grant Hunter", party: "UCP", riding: "Taber-Warner", email: "Taber.Warner@assembly.ab.ca" },
+{ name: "Garth Rowswell", party: "UCP", riding: "Vermilion-Lloydminster-Wainwright", email: "Vermilion.Lloydminster.Wainwright@assembly.ab.ca" },
+{ name: "Martin Long", party: "UCP", riding: "West Yellowhead", email: "West.Yellowhead@assembly.ab.ca" },
+];
+
+const UCP_SUBJECT = "Implement the Majority Electoral Boundaries Report in Full";
+const UCP_BODY = name => `Dear ${name},\n\nI am your constituent and I am writing to urge you to support the full implementation of the majority report of the 2025-2026 Electoral Boundaries Commission.\n\nThe independent commission did its job. A retired judge appointed by Premier Smith's own cabinet signed off on the majority report. The government must respect that process and implement the report in full.\n\nAnything short of full implementation is gerrymandering, and Albertans will remember who stood up for democracy and who did not.\n\nSincerely,\nA Concerned Albertan`;
+
+const NDP_SUBJECT = "Thank You for Standing Up for Democracy";
+const NDP_BODY = name => `Dear ${name},\n\nI am writing to express my support for the NDP's position on the 2025-2026 Electoral Boundaries Commission majority report.\n\nThank you for standing up for fair representation and for calling out the UCP's attempts to manipulate Alberta's electoral boundaries for partisan gain.\n\nPlease continue to hold the government accountable on this issue. Albertans are watching and we are grateful for your voice.\n\nSincerely,\nA Concerned Albertan`;
+
+let currentFilter = 'all';
+
+function setFilter(filter, btn) {
+currentFilter = filter;
+document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'ndp-active'));
+if (filter === 'NDP') btn.classList.add('ndp-active');
+else btn.classList.add('active');
+renderFiltered();
+}
+
+function renderFiltered() {
+const query = document.getElementById('searchInput').value.toLowerCase();
+const list = MLAS.filter(m => {
+const matchesSearch = m.name.toLowerCase().includes(query) || m.riding.toLowerCase().includes(query);
+const matchesFilter = currentFilter === 'all' || m.party === currentFilter;
+return matchesSearch && matchesFilter;
+});
+renderMLAs(list);
+}
+
+function renderMLAs(list) {
+const grid = document.getElementById('mlaGrid');
+const count = document.getElementById('resultsCount');
+if (list.length === 0) {
+grid.innerHTML = '<p class="no-results">No MLAs found. Try a different search.</p>';
+count.textContent = 'No results found';
+return;
+}
+count.textContent = `Showing ${list.length} MLA${list.length !== 1 ? 's' : ''}`;
+grid.innerHTML = list.map(m => {
+const pc = m.party === 'NDP' ? 'ndp' : m.party === 'IND' ? 'ind' : 'ucp';
+const isNDP = m.party === 'NDP';
+const subject = encodeURIComponent(isNDP ? NDP_SUBJECT : UCP_SUBJECT);
+const body = encodeURIComponent(isNDP ? NDP_BODY(m.name) : UCP_BODY(m.name));
+const firstName = m.name.split(' ')[0];
+const btnLabel = isNDP ? `Thank ${firstName}` : `Email ${firstName}`;
+const partyLabel = m.party === 'IND' ? 'Independent' : m.party;
+return `<div class="mla-card ${pc}">
+<div class="mla-party ${pc}">${partyLabel}</div>
+<div class="mla-riding">${m.riding}</div>
+<div class="mla-name">${m.name}</div>
+<a class="mla-email ${pc}" href="mailto:${m.email}?subject=${subject}&body=${body}">✉ ${btnLabel}</a>
+</div>`;
+}).join('');
+}
+
+renderFiltered();
+</script>
+</body>
+</html>
