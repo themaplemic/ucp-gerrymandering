@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Take Action Against Alberta Separatism | Hands Off Our Maps" />
+<meta property="og:description" content="Sign the House of Commons petition calling for federal action on Alberta's Justice Statutes Amendment Act and the APP's meetings with the Trump administration." />
+<meta property="og:image" content="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776443106/Hands_off_our_maps_mo4yhx.png" />
+<meta property="og:url" content="https://handsoffourmaps.ca/petition.html" />
+<title>Take Action Against Alberta Separatism | Hands Off Our Maps</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--red: #C8102E;
+--dark-red: #8B0A1E;
+--black: #0D0D0D;
+--ink: #F0EDE6;
+--muted: #A89E90;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+background: #111111;
+color: var(--ink);
+font-family: 'Source Serif 4', Georgia, serif;
+font-weight: 400;
+line-height: 1.7;
+min-height: 100vh;
+}
+
+header {
+background: var(--black);
+border-bottom: 4px solid var(--red);
+}
+
+.masthead {
+max-width: 900px;
+margin: 0 auto;
+padding: 18px 24px 14px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+.masthead-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.maple-icon {
+width: 100px;
+height: 100px;
+object-fit: contain;
+animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+0%, 100% { transform: rotate(-3deg); }
+50% { transform: rotate(3deg); }
+}
+
+.pub-name {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: 1.6rem;
+color: #FFFFFF;
+letter-spacing: 0.01em;
+line-height: 1;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.pub-name span { color: var(--red); }
+
+.pub-tagline {
+font-family: 'Space Mono', monospace;
+font-size: 0.6rem;
+color: var(--muted);
+letter-spacing: 0.12em;
+text-transform: uppercase;
+margin-top: 3px;
+}
+
+nav {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+nav a {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.15em;
+text-transform: uppercase;
+text-decoration: none;
+transition: color 0.2s;
+}
+
+nav a:hover { color: var(--red); }
+nav a.active { color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+
+.hero {
+background: var(--black);
+padding: 56px 24px 48px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(200,16,46,0.04) 40px, rgba(200,16,46,0.04) 41px);
+pointer-events: none;
+}
+
+.hero-eyebrow {
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--red);
+margin-bottom: 18px;
+}
+
+.hero-headline {
+font-family: 'Anton', sans-serif;
+font-weight: 400;
+font-size: clamp(2rem, 5vw, 3.2rem);
+color: #FFFFFF;
+line-height: 1.12;
+max-width: 740px;
+margin: 0 auto;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+
+.hero-headline span { color: var(--red); }
+
+.rule-bold { border: none; border-top: 3px solid var(--red); margin: 0; }
+
+.content {
+max-width: 680px;
+margin: 0 auto;
+padding: 64px 24px 80px;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-family: 'Space Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+text-decoration: none;
+border: 1px solid var(--red);
+color: var(--red);
+padding: 8px 16px;
+border-radius: 2px;
+margin-bottom: 48px;
+transition: all 0.2s;
+}
+
+.back-btn:hover { border-color: white; color: white; }
+
+.content p {
+font-family: 'Public Sans', sans-serif;
+font-size: 1.05rem;
+color: #C8BFB0;
+margin-bottom: 24px;
+line-height: 1.85;
+font-weight: 400;
+}
+
+.petition-cta {
+background: #1E1E1E;
+border: 1px solid #2A2A2A;
+border-top: 4px solid var(--red);
+padding: 32px;
+margin-top: 40px;
+text-align: center;
+}
+
+.petition-cta p {
+font-family: 'Public Sans', sans-serif;
+font-size: 0.9rem;
+color: var(--muted);
+margin-bottom: 20px;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+}
+
+.petition-btn {
+display: inline-flex;
+align-items: center;
+font-family: 'Anton', sans-serif;
+font-size: 1.2rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+background: var(--red);
+color: white;
+padding: 18px 40px;
+text-decoration: none;
+border-radius: 2px;
+transition: background 0.2s;
+}
+
+.petition-btn:hover { background: var(--dark-red); }
+
+footer {
+background: var(--black);
+border-top: 4px solid var(--red);
+padding: 24px;
+text-align: center;
+}
+
+footer p {
+font-family: 'Space Mono', monospace;
+font-size: 0.62rem;
+color: var(--muted);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="masthead">
+<div class="masthead-left">
+<img class="maple-icon" src="https://res.cloudinary.com/dtnc0c0xw/image/upload/v1776447469/unnamed_qsvv47.png" alt="Hands Off Our Maps protesters" />
+<div>
+<a href="/" class="pub-name">Hands Off <span>Our Maps</span></a>
+<div class="pub-tagline">Protect Alberta's Democracy</div>
+</div>
+</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/resources.html">Resources</a>
+<a href="/mla-contact.html">Contact Your MLA</a>
+<a href="/statements.html">Statement Tracker</a>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-eyebrow">✦ Sign the Petition ✦</div>
+<h1 class="hero-headline">Take Action <span>Against Alberta Separatism</span></h1>
+</div>
+
+<hr class="rule-bold" />
+
+<div class="content">
+<a href="/" class="back-btn">← Back to Campaign</a>
+
+<p>This petition was launched by Chelsea Barnowich, a Calgary-based activist who has become one of the most effective grassroots organizers in the fight against UCP overreach. Chelsea previously spearheaded the Recall Tanya Fir citizen initiative in Calgary-Peigan, demonstrating exactly the kind of relentless, on-the-ground accountability work that the UCP hopes Albertans are too tired to sustain. They are not.</p>
+
+<p>Her latest effort calls on the House of Commons to invoke Section 53 of the Supreme Court Act to refer the constitutionality of Alberta's Justice Statutes Amendment Act, 2025 to the Supreme Court of Canada. The petition also calls on the Foreign Influence Transparency Commissioner to immediately investigate the meetings between the Alberta Prosperity Project and the Trump administration.</p>
+
+<p>Please sign this petition to make your voice heard at the federal level on the UCP separatist agenda.</p>
+
+<div class="petition-cta">
+<p>This petition is open to all Canadians</p>
+<a href="https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-7340" target="_blank" class="petition-btn">Sign This Petition Here</a>
+</div>
+</div>
+
+<footer>
+<p>Hands Off Our Maps &nbsp;·&nbsp; Civic Action</p>
+</footer>
+
+</body>
+</html>
